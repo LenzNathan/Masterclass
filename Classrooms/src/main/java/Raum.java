@@ -2,6 +2,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Raum {
+    private int schuelerkapazitaet;
+
     private Gebaeude gebaeude = Gebaeude.undefined;
     private char geschoss = '-'; // U,E,1,2,3,4 ..., -
     private int nummer = -1; // sollte 1 bis 2 Stellen haben - beim einlesen aufpassen!
