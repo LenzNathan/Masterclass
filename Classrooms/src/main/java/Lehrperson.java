@@ -1,7 +1,6 @@
 import java.util.List;
 
 public class Lehrperson {
-    private String Vorname;
-    private String Nachname;
+    private String kuerzel;
     private List<Taetigkeit> taetigkeiten;
 }
