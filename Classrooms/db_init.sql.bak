@@ -1,5 +1,4 @@
 CREATE DATABASE IF NOT EXISTS classrooms;
-USE classrooms;
 
 DROP TABLE IF EXISTS  abteilung ;
 CREATE TABLE  abteilung 
@@ -132,13 +131,11 @@ DROP TABLE IF EXISTS zuteilung;
 CREATE TABLE zuteilung(
     z_id int NOT NULL AUTO_INCREMENT,
     r_id INT NOT NULL,
-	g_id INT NOT NULL,
     z_beginn INT NOT NULL,
     z_ende INT NOT NULL,
     z_datum DATE NOT NULL,
     PRIMARY KEY (z_id),
     FOREIGN KEY (r_id) REFERENCES raum (r_id),
     FOREIGN KEY (z_beginn) REFERENCES schulstunden (st_id),
-    FOREIGN KEY (z_ende) REFERENCES schulstunden(st_id),
-	FOREIGN KEY (g_id) REFERENCES gruppe (g_id)
+    FOREIGN KEY (z_ende) REFERENCES schulstunden(st_id)
 );
