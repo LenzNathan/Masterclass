@@ -128,12 +128,18 @@ CREATE TABLE s_gruppe(
     FOREIGN KEY (g_id) REFERENCES gruppe (g_id)
 );
 
-DROP TABLE IF EXISTS schulstunden;
-CREATE TABLE schulstunden(
-    st_id INT NOT NULL,
-    st_beginn TIME NOT NULL,
-    st_end TIME NOT NULL,
-    PRIMARY KEY (st_id)
+DROP TABLE IF EXISTS stunden_anfang;
+CREATE TABLE stunden_anfang(
+	st_a_id INT NOT NULL,
+	st_a_start TIME NOT NULL,
+	PRIMARY KEY (st_a_id)
+);
+
+DROP TABLE IF EXISTS stunden_ende;
+CREATE TABLE stunden_ende(
+	st_e_id INT NOT NULL,
+	st_e_start TIME NOT NULL,
+	PRIMARY KEY (st_e_id)
 );
 
 /*wann welche gruppe den raum besezt*/
@@ -142,12 +148,12 @@ CREATE TABLE zuteilung(
     z_id int NOT NULL AUTO_INCREMENT,
     r_id INT NOT NULL,
 	g_id INT NOT NULL,
-    z_beginn INT NOT NULL,
-    z_ende INT NOT NULL,
+	st_a_id INT NOT NULL,
+	st_e_id INT NOT NULL,
     z_datum DATE NOT NULL,
     PRIMARY KEY (z_id),
     FOREIGN KEY (r_id) REFERENCES raum (r_id),
-    FOREIGN KEY (z_beginn) REFERENCES schulstunden (st_id),
-    FOREIGN KEY (z_ende) REFERENCES schulstunden(st_id),
+    FOREIGN KEY (st_a_id) REFERENCES stunden_anfang (st_a_id),
+    FOREIGN KEY (st_e_id) REFERENCES stunden_ende(st_e_id),
 	FOREIGN KEY (g_id) REFERENCES gruppe (g_id)
 );
