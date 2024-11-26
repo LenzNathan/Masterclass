@@ -1,4 +1,5 @@
-CREATE DATABASE IF NOT EXISTS classrooms;
+DROP DATABASE IF EXISTS classrooms;
+CREATE DATABASE classrooms;
 USE classrooms;
 
 DROP TABLE IF EXISTS  abteilung ;
@@ -38,25 +39,33 @@ CREATE TABLE  l_tag
     FOREIGN KEY ( tag_id ) REFERENCES  tag  ( tag_id )
 );
 
+DROP TABLE IF EXISTS jahrgang;
+CREATE TABLE jahrgang(
+	j_id int NOT NULL AUTO_INCREMENT,
+	a_id int NOT NULL,
+	stufe int NOT NULL,
+	PRIMARY KEY (j_id),
+	FOREIGN KEY (a_id) REFERENCES abteilung (a_id)
+);
+
+/*Zwischentabelle zwischen jahrgang und Tag*/
+DROP TABLE IF EXISTS jahrgang_tag;
+CREATE TABLE jahrgang_tag(
+	tag_id int NOT NULL,
+	j_id int NOT NULL,
+	PRIMARY KEY (tag_id, j_id),
+	FOREIGN KEY (tag_id) REFERENCES tag (tag_id),
+	FOREIGN KEY (j_id) REFERENCES jahrgang (j_id)
+);
+
 DROP TABLE IF EXISTS  schulklasse ;
 CREATE TABLE  schulklasse 
 (
      sk_id       int NOT NULL AUTO_INCREMENT,
-     a_id        int DEFAULT NULL,
-     jahrgang    int DEFAULT NULL,
      klassen_id  int DEFAULT NULL,
+	 j_id int NOT NULL,
     PRIMARY KEY ( sk_id ),
-    FOREIGN KEY ( a_id ) REFERENCES  abteilung  ( a_id )
-);
-
-/*Zwischentabelle zwischen Schulklassen und Tag*/
-DROP TABLE IF EXISTS klasse_tag;
-CREATE TABLE klasse_tag(
-    tag_id INT NOT NULL,
-    sk_id INT NOT NULL,
-    PRIMARY KEY (tag_id, sk_id),
-    FOREIGN KEY (tag_id) REFERENCES tag(tag_id),
-    FOREIGN KEY (sk_id) REFERENCES schulklasse(sk_id)
+	FOREIGN KEY (j_id) REFERENCES jahrgang (j_id)
 );
 
 /*habe gebäude in haus umgenannt, weil gebaeude isch a bissi weird*/
