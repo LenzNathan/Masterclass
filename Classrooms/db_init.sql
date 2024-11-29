@@ -1,3 +1,11 @@
+/*
+This sql skript is only used to set up the database 'classrooms'
+it will delete all data which exists in the database 'classrooms'
+in order to recreate it
+
+-- Don't execute this script if you have important data in this database!
+*/
+
 DROP DATABASE IF EXISTS classrooms;
 CREATE DATABASE classrooms;
 USE classrooms;
@@ -14,7 +22,7 @@ CREATE TABLE abteilung
 (
     abt_id      int PRIMARY KEY NOT NULL AUTO_INCREMENT,
     abt_kuerzel char(4),
-    abt_name    varchar(50)
+    abt_name    varchar(100)
 );
 
 DROP TABLE IF EXISTS abteilungs_stufe;
