@@ -5,163 +5,154 @@ USE classrooms;
 DROP TABLE IF EXISTS tag;
 CREATE TABLE tag
 (
-    tag_id   int NOT NULL AUTO_INCREMENT,
-    tag_name varchar(50),
-    PRIMARY KEY (tag_id)
+    tag_id   int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    tag_name varchar(50)
 );
 
 DROP TABLE IF EXISTS abteilung;
 CREATE TABLE abteilung
 (
-    a_id      int NOT NULL AUTO_INCREMENT,
-    a_kuerzel char(4),
-    a_name    varchar(50),
-    PRIMARY KEY (a_id)
+    abt_id      int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    abt_kuerzel char(4),
+    abt_name    varchar(50)
 );
 
 DROP TABLE IF EXISTS abteilungs_stufe;
 CREATE TABLE abteilungs_stufe
 (
-    id        int primary key,
+    stufe_id  int PRIMARY KEY,
     stufe     int,
     abteilung int,
-    foreign key (abteilung) references abteilung (a_id)
+    FOREIGN KEY (abteilung) REFERENCES abteilung (abt_id)
 );
 
 DROP TABLE IF EXISTS stufe_tag;
 CREATE TABLE stufe_tag
 (
-    stufe_tag_id int primary key,
-    stufe        int,
-    tag          int,
-    foreign key (stufe) references abteilungs_stufe (id),
-    foreign key (tag) references tag (tag_id)
+    stufe_id int,
+    tag_id   int,
+    PRIMARY KEY (stufe_id, tag_id),
+    FOREIGN KEY (stufe_id) REFERENCES abteilungs_stufe (stufe_id),
+    FOREIGN KEY (tag_id) REFERENCES tag (tag_id)
 );
 
 DROP TABLE IF EXISTS lehrperson;
 CREATE TABLE lehrperson
 (
-    l_id       int NOT NULL AUTO_INCREMENT,
-    l_vorname  varchar(50),
-    l_nachname varchar(50),
-    PRIMARY KEY (l_id)
+    lehrer_id       int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    lehrer_vorname  varchar(50),
+    lehrer_nachname varchar(50)
 );
 
 /*Zwischentablelle zwischen Tags und Lehrer*/
-DROP TABLE IF EXISTS l_tag;
-CREATE TABLE l_tag
+DROP TABLE IF EXISTS lehrer_tag;
+CREATE TABLE lehrer_tag
 (
-    l_id   int NOT NULL,
-    tag_id int NOT NULL,
-    PRIMARY KEY (l_id, tag_id),
-    FOREIGN KEY (l_id) REFERENCES lehrperson (l_id),
+    lehrer_id int NOT NULL,
+    tag_id    int NOT NULL,
+    PRIMARY KEY (lehrer_id, tag_id),
+    FOREIGN KEY (lehrer_id) REFERENCES lehrperson (lehrer_id),
     FOREIGN KEY (tag_id) REFERENCES tag (tag_id)
 );
 
 DROP TABLE IF EXISTS schulklasse;
 CREATE TABLE schulklasse
 (
-    sk_id      int NOT NULL AUTO_INCREMENT,
-    klassen_id int DEFAULT NULL,
-    jahrgang   int NOT NULL,
-    abteilung  int not null,
-    PRIMARY KEY (sk_id),
-    foreign key (abteilung) references abteilung (a_id)
+    schulklasse_id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    klassen_id     int DEFAULT NULL,
+    jahrgang       int             NOT NULL,
+    abteilung      int             NOT NULL,
+    FOREIGN KEY (abteilung) REFERENCES abteilung (abt_id)
 );
 
 /*habe gebäude in haus umgenannt, weil gebaeude isch a bissi weird*/
 DROP TABLE IF EXISTS gebaeude;
 CREATE TABLE gebaeude
 (
-    g_id      INT NOT NULL AUTO_INCREMENT,
-    g_kuerzel char(1),
-    g_name    varchar(50),
-    PRIMARY KEY (g_id)
+    geb_id      int NOT NULL AUTO_INCREMENT,
+    geb_kuerzel char(1),
+    geb_name    varchar(50),
+    PRIMARY KEY (geb_id)
 );
 
 DROP TABLE IF EXISTS raum;
 CREATE TABLE raum
 (
-    r_id        INT NOT NULL AUTO_INCREMENT,
-    h_id        INT NOT NULL,
-    r_nummer    INT NOT NULL,
-    r_kapazität INT NOT NULL,
-    PRIMARY KEY (r_id),
-    FOREIGN KEY (h_id) REFERENCES gebaeude (g_id)
+    raum_id        int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    geb_id         int             NOT NULL,
+    raum_nummer    int             NOT NULL,
+    raum_kapazität int             NOT NULL,
+    FOREIGN KEY (geb_id) REFERENCES gebaeude (geb_id)
 );
 
 /*Zwischentabelle Raum und Tag*/
-DROP TABLE IF EXISTS r_tag;
-CREATE TABLE r_tag
+DROP TABLE IF EXISTS raum_tag;
+CREATE TABLE raum_tag
 (
-    r_id   INT NOT NULL,
-    tag_id INT NOT NULL,
-    PRIMARY KEY (r_id, tag_id),
+    raum_id int NOT NULL,
+    tag_id  int NOT NULL,
+    PRIMARY KEY (raum_id, tag_id),
     FOREIGN KEY (tag_id) REFERENCES tag (tag_id),
-    FOREIGN KEY (r_id) REFERENCES raum (r_id)
+    FOREIGN KEY (raum_id) REFERENCES raum (raum_id)
 );
 
 DROP TABLE IF EXISTS gruppe;
 CREATE TABLE gruppe
 (
-    g_id   int NOT NULL,
-    sk_id  int NOT NULL,
-    g_name varchar(50),
-    FOREIGN KEY (sk_id) REFERENCES schulklasse (sk_id),
-    PRIMARY KEY (g_id)
+    gruppe_id      int PRIMARY KEY NOT NULL,
+    gruppe_name    varchar(50),
+    schulklasse_id int             NOT NULL,
+    FOREIGN KEY (schulklasse_id) REFERENCES schulklasse (schulklasse_id)
 );
 
 DROP TABLE IF EXISTS schueler;
 CREATE TABLE schueler
 (
-    s_id       int NOT NULL,
-    sk_id      int DEFAULT NULL,
-    s_vorname  varchar(50),
-    s_nachname varchar(50),
-    PRIMARY KEY (s_id),
-    FOREIGN KEY (sk_id) REFERENCES schulklasse (sk_id)
+    schueler_id       int PRIMARY KEY NOT NULL,
+    schulklasse_id    int DEFAULT NULL,
+    schueler_vorname  varchar(50),
+    schueler_nachname varchar(50),
+    FOREIGN KEY (schulklasse_id) REFERENCES schulklasse (schulklasse_id)
 );
 
 /*Zwischentabelle schueler und gruppe*/
-DROP TABLE IF EXISTS s_gruppe;
-CREATE TABLE s_gruppe
+DROP TABLE IF EXISTS schueler_gruppe;
+CREATE TABLE schueler_gruppe
 (
-    s_id INT NOT NULL,
-    g_id INT NOT NULL,
-    PRIMARY KEY (s_id, g_id),
-    FOREIGN KEY (s_id) REFERENCES schueler (s_id),
-    FOREIGN KEY (g_id) REFERENCES gruppe (g_id)
+    schueler_id int NOT NULL,
+    group_id    int NOT NULL,
+    PRIMARY KEY (schueler_id, group_id),
+    FOREIGN KEY (schueler_id) REFERENCES schueler (schueler_id),
+    FOREIGN KEY (group_id) REFERENCES gruppe (gruppe_id)
 );
 
-DROP TABLE IF EXISTS stunden_anfang;
-CREATE TABLE stunden_anfang
+DROP TABLE IF EXISTS stunden_start;
+CREATE TABLE stunden_start
 (
-    st_a_id    INT  NOT NULL,
-    st_a_start TIME NOT NULL,
-    PRIMARY KEY (st_a_id)
+    start_id   int PRIMARY KEY NOT NULL,
+    start_zeit time            NOT NULL
 );
 
 DROP TABLE IF EXISTS stunden_ende;
 CREATE TABLE stunden_ende
 (
-    st_e_id    INT  NOT NULL,
-    st_e_start TIME NOT NULL,
-    PRIMARY KEY (st_e_id)
+    ende_id   int PRIMARY KEY NOT NULL,
+    ende_zeit time            NOT NULL
 );
 
 /*wann welche gruppe den raum besezt*/
-DROP TABLE IF EXISTS zuteilung;
-CREATE TABLE zuteilung
+DROP TABLE IF EXISTS stundenblock;
+CREATE TABLE stundenblock
 (
-    z_id    int  NOT NULL AUTO_INCREMENT,
-    r_id    INT  NOT NULL,
-    g_id    INT  NOT NULL,
-    st_a_id INT  NOT NULL,
-    st_e_id INT  NOT NULL,
-    z_datum DATE NOT NULL,
-    PRIMARY KEY (z_id),
-    FOREIGN KEY (r_id) REFERENCES raum (r_id),
-    FOREIGN KEY (st_a_id) REFERENCES stunden_anfang (st_a_id),
-    FOREIGN KEY (st_e_id) REFERENCES stunden_ende (st_e_id),
-    FOREIGN KEY (g_id) REFERENCES gruppe (g_id)
+    stundenblock_id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    raum_id         int             NOT NULL,
+    gruppe_id       int             NOT NULL,
+    start_id        int             NOT NULL,
+    ende_id         int             NOT NULL,
+    stundenblock    date            NOT NULL,
+    FOREIGN KEY (raum_id) REFERENCES raum (raum_id),
+    FOREIGN KEY (start_id) REFERENCES stunden_start (start_id),
+    FOREIGN KEY (ende_id) REFERENCES stunden_ende (ende_id),
+    FOREIGN KEY (gruppe_id) REFERENCES gruppe (gruppe_id)
 );
+
