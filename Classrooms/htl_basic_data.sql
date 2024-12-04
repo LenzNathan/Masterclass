@@ -54,5 +54,8 @@ VALUES ('HWII', 'Höhere Abteilung Wirtschaftsingenieure und Betriebsinformatik'
        ('HEL', 'Höhere Abteilung Elektronik und Technische Informatik'),
        ('HET', 'Höhere Abteilung Elektrotechnik und Prozessinformatik'),
        ('HMBT', 'Höhere Abteilung Maschinenbau und Robotic Centre'),
-       ('FELC', 'Fachschule Elektronik und Technische Informatik'),
-       ('FET', 'Fachschule Elektrotechnik und Prozessinformatik');
+       ('FELC', 'Fachschule Abteilung Elektronik und Technische Informatik'),
+       ('FET', 'Fachschule Abteilung Elektrotechnik und Prozessinformatik'),
+	   ('BELI', 'Abendschule Abteilung Elektronik und Technische Informatik'),
+	   ('BET', 'Abendschule Abteilung Elektrotechnik und Prozessinformatik'),
+	   ('BMB', 'Abendschule Abteilung Maschinenbau und Robotic Centre');
