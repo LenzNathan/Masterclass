@@ -1,6 +1,9 @@
 package api;
 
 //import de.example.model.Gebaeude;
+
+import jpa.Gebaeude;
+
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;

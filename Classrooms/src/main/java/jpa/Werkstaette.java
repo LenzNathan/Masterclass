@@ -1,3 +1,5 @@
+package jpa;
+
 import java.util.List;
 
 public class Werkstaette extends Raum{
