@@ -17,6 +17,7 @@ repositories {
 dependencies {
     api(libs.org.junit.jupiter.junit.jupiter)
     api(libs.org.springdoc.springdoc.openapi.ui)
+    implementation("javax.ws.rs:javax.ws.rs-api:2.1.1") // JAX-RS API
 }
 
 group = "groupId"
