@@ -2,7 +2,7 @@ package jpa;
 
 import java.util.ArrayList;
 
-public class Gebaeude implements Resource {
+public class Gebaeude {
     public static void initBuildings() {
         Gebaeude undefined = new Gebaeude("_", "undefined");
         Gebaeude Stoeckelgebaeude = new Gebaeude("S", "Stoeckelgebaeude");
@@ -21,35 +21,31 @@ public class Gebaeude implements Resource {
     String name;
     private final int id;
 
-    private static ArrayList<Gebaeude> buildings;
+    private static ArrayList<Gebaeude> buildings = new ArrayList<Gebaeude>();
 
-    // <editor-fold> Constructors
-    Gebaeude(String kuerzel, String name) {
+    public Gebaeude(String kuerzel, String name) {
         this.kuerzel = kuerzel;
         this.name = name;
 
         int size = buildings.size();
         int id = size;
-        boolean invalidID = true;
-        while (invalidID) {
-            for (Gebaeude g : buildings) {
-                if (g.id == size) {
-                    id += 1;
-                    break;
-                }
-                invalidID = false;
+        for (Gebaeude g : buildings) {
+            if (g.id == size) {
+                id += 1;
+                break;
             }
         }
         this.id = id;
     }
-    // </editor-fold>
 
     public String getKuerzel() {
         return kuerzel;
     }
 
     public void persist() {
-        buildings.add(this);
+        if (!buildings.contains(this)) {
+            buildings.add(this);
+        }
     }
 
     public int getId() {
@@ -60,13 +56,38 @@ public class Gebaeude implements Resource {
         return buildings;
     }
 
-    @Override
-    public Gebaeude findById(int id) {
+
+    public static Gebaeude findById(int id) {
+        for (Gebaeude g : buildings) {
+            if (g.id == id) {
+                return g;
+            }
+        }
         return null;
     }
 
-    @Override
-    public void delete(int id) {
+    public static void delete(Gebaeude g) {
+        buildings.remove(g);
+    }
 
+    public static void delete(int id) {
+        buildings.removeIf(g -> g.id == id);
+    }
+
+    public static void resetGebaeude() {
+        buildings.clear();
+    }
+
+    public boolean equals(Gebaeude g) {
+        return g.getKuerzel().equals(getKuerzel()) && g.name.equals(name);
+    }
+
+    public static Gebaeude fromKuerzel(String identifier) {
+        for (Gebaeude g : buildings) {
+            if (g.getKuerzel().equals(identifier)) {
+                return g;
+            }
+        }
+        return null;
     }
 }

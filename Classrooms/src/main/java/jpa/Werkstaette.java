@@ -1,7 +1,7 @@
 package jpa;
 
 import java.util.List;
-
+/*
 public class Werkstaette extends Raum{
     private int Taetigkeitsplaetze = 0;
     private List<Taetigkeit> taetigkeiten;
@@ -9,3 +9,4 @@ public class Werkstaette extends Raum{
       super(gebaeude, geschoss, nummer);
     }
 }
+*/

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="test.RaumTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2025-02-07T13:45:34" hostname="NATHANSTHINKPAD" time="0.087">
+  <properties/>
+  <testcase name="[1] _U01, jpa.Gebaeude@7216fb24, U, 1" classname="test.RaumTest" time="0.046"/>
+  <testcase name="[2] SE65, jpa.Gebaeude@55342f40, E, 65" classname="test.RaumTest" time="0.002"/>
+  <testcase name="[3] I123, jpa.Gebaeude@a4ca3f6, 1, 23" classname="test.RaumTest" time="0.002"/>
+  <testcase name="[4] H201, jpa.Gebaeude@72ea6193, 2, 1" classname="test.RaumTest" time="0.001"/>
+  <testcase name="[5] A308, jpa.Gebaeude@31aa3ca5, 3, 8" classname="test.RaumTest" time="0.002"/>
+  <testcase name="[6] I456, jpa.Gebaeude@a4ca3f6, 4, 56" classname="test.RaumTest" time="0.001"/>
+  <testcase name="[1] _U01, jpa.Gebaeude@2a2c13a8, U, 1" classname="test.RaumTest" time="0.001"/>
+  <testcase name="[2] SE65, jpa.Gebaeude@b6b1987, E, 65" classname="test.RaumTest" time="0.001"/>
+  <testcase name="[3] I123, jpa.Gebaeude@6b44435b, 1, 23" classname="test.RaumTest" time="0.003"/>
+  <testcase name="[4] H201, jpa.Gebaeude@2ccca26f, 2, 1" classname="test.RaumTest" time="0.002"/>
+  <testcase name="[5] A308, jpa.Gebaeude@66b7550d, 3, 8" classname="test.RaumTest" time="0.001"/>
+  <testcase name="[6] I456, jpa.Gebaeude@6b44435b, 4, 56" classname="test.RaumTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

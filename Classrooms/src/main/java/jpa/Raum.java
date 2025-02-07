@@ -1,14 +1,15 @@
 package jpa;
 
+import javax.ws.rs.NotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Raum {
     private int schuelerkapazitaet;
 
-    private Gebaeude gebaeude = Gebaeude.undefined;
+    private Gebaeude gebaeude;
     private char geschoss = '-'; // U,E,1,2,3,4 ..., -
-    private int nummer = -1; // sollte 1 bis 2 Stellen haben - beim einlesen aufpassen!
+    private int nummer = -1; // sollte 1 bis 2 Stellen haben - beim Einlesen aufpassen!
     private String kuerzel = "";
 
     public Raum(Gebaeude gebaeude, char geschoss, int nummer) {
@@ -21,6 +22,9 @@ public class Raum {
     public static Raum fromKuerzel(String k) {
         // Gebaeude setzen
         var geb = Gebaeude.fromKuerzel(k.substring(0, 1));
+        if (geb == null) {
+            throw new NotFoundException("Das Gebäude konnte nicht gefunden werden");
+        }
         // Geschoss setzen
         char geschoss = k.charAt(1);
         List<Character> geschosse = new ArrayList<>();

@@ -8,7 +8,7 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.List;
-
+/*
 @Path("/gebaeude")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
@@ -55,3 +55,4 @@ public class GebaeudeResource {
         return Response.status(Response.Status.NO_CONTENT).build();
     }
 }
+*/
