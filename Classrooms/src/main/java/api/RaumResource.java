@@ -37,7 +37,7 @@ public class RaumResource {
         }
         existingRaum.raumNummer = raum.raumNummer;
         existingRaum.raumKapazitaet = raum.raumKapazitaet;
-        existingRaum.gebaeude = raum.gebaeude;
+        existingRaum.Building = raum.Building;
         existingRaum.persist();
         return Response.ok(existingRaum).build();
     }
