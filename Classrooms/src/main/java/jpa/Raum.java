@@ -8,10 +8,10 @@ import javax.ws.rs.NotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity
+
 public class Raum extends PanacheEntity {
     public int schuelerkapazitaet;
-    @ManyToOne
+
     public Gebaeude gebaeude;
     public char geschoss = '-'; // U,E,1,2,3,4 ..., -
     public int nummer = -1; // sollte 1 bis 2 Stellen haben - beim Einlesen aufpassen!
