@@ -1,22 +1,31 @@
 package jpa;
 
+import io.quarkus.hibernate.orm.panache.PanacheEntity;
+import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToOne;
+
 import javax.ws.rs.NotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Raum {
-    private int schuelerkapazitaet;
-
-    private Gebaeude gebaeude;
-    private char geschoss = '-'; // U,E,1,2,3,4 ..., -
-    private int nummer = -1; // sollte 1 bis 2 Stellen haben - beim Einlesen aufpassen!
-    private String kuerzel = "";
+@Entity
+public class Raum extends PanacheEntity {
+    public int schuelerkapazitaet;
+    @ManyToOne
+    public Gebaeude gebaeude;
+    public char geschoss = '-'; // U,E,1,2,3,4 ..., -
+    public int nummer = -1; // sollte 1 bis 2 Stellen haben - beim Einlesen aufpassen!
+    public String kuerzel = "";
 
     public Raum(Gebaeude gebaeude, char geschoss, int nummer) {
         this.gebaeude = gebaeude;
         this.geschoss = geschoss;
         this.nummer = nummer;
         this.kuerzel = generateKuerzel(gebaeude, geschoss, nummer);
+    }
+
+    public Raum() {
+
     }
 
     public static Raum fromKuerzel(String k) {
