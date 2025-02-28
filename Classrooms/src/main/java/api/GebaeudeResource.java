@@ -1,12 +1,12 @@
 package api;
 
-//import jpa.Building;
+import jakarta.ws.rs.core.Response;
 import jpa.Building;
 
-import javax.ws.rs.*;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
+import jakarta.ws.rs.*;
+import jakarta.ws.rs.core.MediaType;
 import java.util.List;
+
 @Path("/Building")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
@@ -36,11 +36,12 @@ public class GebaeudeResource {
         if (existingBuilding == null) {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
-        existingBuilding.gebKuerzel = Building.gebKuerzel;
-        existingBuilding.gebName = Building.gebName;
+        existingBuilding.kuerzel = Building.kuerzel;
+        existingBuilding.name = Building.name;
         existingBuilding.persist();
         return Response.ok(existingBuilding).build();
     }
+
 
     @DELETE
     @Path("/{id}")
@@ -49,7 +50,7 @@ public class GebaeudeResource {
         if (existingBuilding == null) {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
-        existingBuilding.delete();
+        //existingBuilding.delete();
         return Response.status(Response.Status.NO_CONTENT).build();
     }
 }
