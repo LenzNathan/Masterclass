@@ -1,0 +1,26 @@
+###
+GET http://localhost:8080/Building
+###
+GET http://localhost:8080/Building/1
+###
+
+POST http://localhost:8080/Building
+Content-Type: application/json
+
+{
+"name":"TestGeb",
+"kuerzel":"T"
+}
+
+###
+
+PUT http://localhost:8080/Building/1
+Content-Type: application/json
+
+{
+  "name": "Geb___changed"
+}
+
+###
+
+DELETE http://localhost:8080/Building/1

@@ -17,7 +17,4 @@ public class Building extends PanacheEntity {
     public static Building getBuildingByKuerzel(String kuerzel) {
         return find("kuerzel", kuerzel).firstResult();
     }
-    public static List<Building> getAllBuildings() {
-        return listAll();
-    }
 }
