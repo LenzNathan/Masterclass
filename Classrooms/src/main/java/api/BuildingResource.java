@@ -11,7 +11,7 @@ import java.util.List;
 @Path("/Building")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
-public class GebaeudeResource {
+public class BuildingResource {
 
     @GET
     public List<Building> getAllBuilding() {
