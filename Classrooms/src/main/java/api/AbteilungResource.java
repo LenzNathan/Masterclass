@@ -39,8 +39,8 @@ public class AbteilungResource {
         if (existingAbteilung == null) {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
-        existingAbteilung.abtKuerzel = abteilung.abtKuerzel;
-        existingAbteilung.abtName = abteilung.abtName;
+        existingAbteilung.nickname = abteilung.nickname;
+        existingAbteilung.name = abteilung.name;
         existingAbteilung.persist();
         return Response.ok(existingAbteilung).build();
     }
