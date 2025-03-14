@@ -1,11 +1,13 @@
 package api;
 
-//import de.example.model.Abteilung;
-import javax.ws.rs.*;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
+import jpa.Abteilung;
+import jakarta.transaction.Transactional;
+import jakarta.ws.rs.*;
+import jakarta.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.Response;
+
 import java.util.List;
-/*
+
 @Path("/abteilungen")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
@@ -17,6 +19,7 @@ public class AbteilungResource {
     }
 
     @POST
+    @Transactional
     public Response createAbteilung(Abteilung abteilung) {
         abteilung.persist();
         return Response.status(Response.Status.CREATED).entity(abteilung).build();
@@ -30,6 +33,7 @@ public class AbteilungResource {
 
     @PUT
     @Path("/{id}")
+    @Transactional
     public Response updateAbteilung(@PathParam("id") Integer id, Abteilung abteilung) {
         Abteilung existingAbteilung = Abteilung.findById(id);
         if (existingAbteilung == null) {
@@ -43,6 +47,7 @@ public class AbteilungResource {
 
     @DELETE
     @Path("/{id}")
+    @Transactional
     public Response deleteAbteilung(@PathParam("id") Integer id) {
         Abteilung existingAbteilung = Abteilung.findById(id);
         if (existingAbteilung == null) {
@@ -52,5 +57,3 @@ public class AbteilungResource {
         return Response.status(Response.Status.NO_CONTENT).build();
     }
 }
-
-*/
