@@ -41,12 +41,12 @@ public class BuildingResource {
         if (existingBuilding == null) {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
-        if (building.kuerzel != null) {
-            existingBuilding.kuerzel = building.kuerzel;
+        if (building.getKuerzel() != null) {
+            existingBuilding.setKuerzel(building.getKuerzel());
             changed = true;
         }
-        if (building.name != null) {
-            existingBuilding.name = building.name;
+        if (building.getName() != null) {
+            existingBuilding.setName(building.getName());
             changed = true;
         }
         if(changed) {

@@ -6,10 +6,42 @@ import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Student extends PanacheEntity {
-    public String firstname;
-    public String lastname;
+    private String firstname;
+    private String lastname;
     @ManyToOne
-    public Schulklasse schulklasse;
+    private Schulklasse schulklasse;
     @ManyToOne
-    public Group group;
+    private Group group;
+
+    public String getFirstname() {
+        return firstname;
+    }
+
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
+
+    public Schulklasse getSchulklasse() {
+        return schulklasse;
+    }
+
+    public void setSchulklasse(Schulklasse schulklasse) {
+        this.schulklasse = schulklasse;
+    }
+
+    public Group getGroup() {
+        return group;
+    }
+
+    public void setGroup(Group group) {
+        this.group = group;
+    }
 }

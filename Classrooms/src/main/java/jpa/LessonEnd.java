@@ -7,6 +7,22 @@ import java.sql.Time;
 
 @Entity
 public class LessonEnd extends PanacheEntity {
-    public int lessonNumber;
-    public Time time;
+    private int lessonNumber;
+    private Time time;
+
+    public int getLessonNumber() {
+        return lessonNumber;
+    }
+
+    public void setLessonNumber(int lessonNumber) {
+        this.lessonNumber = lessonNumber;
+    }
+
+    public Time getTime() {
+        return time;
+    }
+
+    public void setTime(Time time) {
+        this.time = time;
+    }
 }
