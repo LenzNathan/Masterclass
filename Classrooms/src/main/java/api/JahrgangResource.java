@@ -1,50 +1,50 @@
 package api;
 
-//import de.example.model.AbteilungsStufe;
+import jpa.Jahrgang;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.List;
-/*
+
 @Path("/abteilungsstufen")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
-public class AbteilungsStufeResource {
+public class JahrgangResource {
 
     @GET
-    public List<AbteilungsStufe> getAllAbteilungsStufen() {
-        return AbteilungsStufe.listAll();
+    public List<Jahrgang> getAllJahrgangn() {
+        return Jahrgang.listAll();
     }
 
     @POST
-    public Response createAbteilungsStufe(AbteilungsStufe abteilungsStufe) {
+    public Response createJahrgang(Jahrgang abteilungsStufe) {
         abteilungsStufe.persist();
         return Response.status(Response.Status.CREATED).entity(abteilungsStufe).build();
     }
 
     @GET
     @Path("/{id}")
-    public AbteilungsStufe getAbteilungsStufe(@PathParam("id") Integer id) {
-        return AbteilungsStufe.findById(id);
+    public Jahrgang getJahrgang(@PathParam("id") Integer id) {
+        return Jahrgang.findById(id);
     }
 
     @PUT
     @Path("/{id}")
-    public Response updateAbteilungsStufe(@PathParam("id") Integer id, AbteilungsStufe abteilungsStufe) {
-        AbteilungsStufe existingStufe = AbteilungsStufe.findById(id);
+    public Response updateJahrgang(@PathParam("id") Integer id, Jahrgang abteilungsStufe) {
+        Jahrgang existingStufe = Jahrgang.findById(id);
         if (existingStufe == null) {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
-        existingStufe.stufe = abteilungsStufe.stufe;
-        existingStufe.abteilung = abteilungsStufe.abteilung;
+        existingStufe.setStufe(abteilungsStufe.getStufe());
+        existingStufe.setAbteilung(abteilungsStufe.getAbteilung());
         existingStufe.persist();
         return Response.ok(existingStufe).build();
     }
 
     @DELETE
     @Path("/{id}")
-    public Response deleteAbteilungsStufe(@PathParam("id") Integer id) {
-        AbteilungsStufe existingStufe = AbteilungsStufe.findById(id);
+    public Response deleteJahrgang(@PathParam("id") Integer id) {
+        Jahrgang existingStufe = Jahrgang.findById(id);
         if (existingStufe == null) {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
@@ -52,5 +52,3 @@ public class AbteilungsStufeResource {
         return Response.status(Response.Status.NO_CONTENT).build();
     }
 }
-
-*/
