@@ -44,12 +44,12 @@ public class JahrgangResource {
         if (existingJahrgang == null) {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
-        if (existingJahrgang.getStufe() != NULL) {
+        if (existingJahrgang.getStufe() != 0) {
             existingJahrgang.setStufe(abteilungsStufe.getStufe());
             changed = true;
         }
 
-        if (existingJahrgang.getAbteilung() != NULL) {
+        if (existingJahrgang.getAbteilung() != null) {
             existingJahrgang.setAbteilung(abteilungsStufe.getAbteilung());
             changed = true;
         }
