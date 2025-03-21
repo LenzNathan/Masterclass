@@ -27,8 +27,13 @@ public class AbteilungResource {
 
     @GET
     @Path("/{id}")
-    public Abteilung getAbteilung(@PathParam("id") Integer id) {
-        return Abteilung.findById(id);
+    public Response getAbteilung(@PathParam("id") Integer id) {
+        Abteilung a = Abteilung.findById(id);
+        if (a == null){
+            return Response.status(Response.Status.NOT_FOUND).build();
+        }else {
+            return Response.status(Response.Status.OK).entity(a).build();
+        }
     }
 
     @PUT
@@ -53,6 +58,19 @@ public class AbteilungResource {
             return Response.ok(existingAbteilung).build();
         }else {
             return Response.status(Response.Status.NOT_MODIFIED).build();
+        }
+    }
+
+    @DELETE
+    @Path("/{id}")
+    @Transactional
+    public Response deleteAbteilung(@PathParam("id") Integer id) {
+        Abteilung a = Abteilung.findById(id);
+        if (a == null){
+            return Response.status(Response.Status.NOT_FOUND).build();
+        }else {
+            a.delete();
+            return Response.status(Response.Status.NO_CONTENT).build();
         }
     }
 }
