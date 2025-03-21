@@ -8,7 +8,7 @@ import jpa.Building;
 
 import java.util.List;
 
-@Path("/Building")
+@Path("/building")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 public class BuildingResource {

@@ -1,12 +1,13 @@
 package api;
 
+import jakarta.transaction.Transactional;
 import jpa.Jahrgang;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.List;
 
-@Path("/abteilungsstufen")
+@Path("/jahrgang")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 public class JahrgangResource {
@@ -17,6 +18,7 @@ public class JahrgangResource {
     }
 
     @POST
+    @Transactional
     public Response createJahrgang(Jahrgang abteilungsStufe) {
         abteilungsStufe.persist();
         return Response.status(Response.Status.CREATED).entity(abteilungsStufe).build();
@@ -30,6 +32,7 @@ public class JahrgangResource {
 
     @PUT
     @Path("/{id}")
+    @Transactional
     public Response updateJahrgang(@PathParam("id") Integer id, Jahrgang abteilungsStufe) {
         Jahrgang existingStufe = Jahrgang.findById(id);
         if (existingStufe == null) {
