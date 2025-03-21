@@ -1,0 +1,27 @@
+###
+GET http://localhost:8080/Abteilung
+Content-Type: */*
+###
+GET http://localhost:8080/Abteilung/1
+###
+
+POST http://localhost:8080/Abteilung
+Content-Type: application/json
+
+{
+"nickname":"WI",
+"name":"Wirtschaftsingenieure"
+}
+
+###
+
+PUT http://localhost:8080/Building/1
+Content-Type: application/json
+
+{
+  "name": "Geb___changed"
+}
+
+###
+
+DELETE http://localhost:8080/Building/1

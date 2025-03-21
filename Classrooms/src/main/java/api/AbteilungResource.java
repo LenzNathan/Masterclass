@@ -8,7 +8,7 @@ import jakarta.ws.rs.core.Response;
 
 import java.util.List;
 
-@Path("/abteilungen")
+@Path("/Abteilung")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 public class AbteilungResource {
@@ -35,14 +35,47 @@ public class AbteilungResource {
     @Path("/{id}")
     @Transactional
     public Response updateAbteilung(@PathParam("id") Integer id, Abteilung abteilung) {
+        boolean changed = false;
         Abteilung existingAbteilung = Abteilung.findById(id);
         if (existingAbteilung == null) {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
-        existingAbteilung.setNickname(abteilung.getNickname());
-        existingAbteilung.setName(abteilung.getName());
+        if (abteilung.getNickname() != null) {
+            existingAbteilung.setNickname(abteilung.getNickname());
+            changed = true;
+        }
+        if (abteilung.getName() != null) {
+            existingAbteilung.setName(abteilung.getName());
+            changed = true;
+        }
+        if(changed) {
+            existingAbteilung.persist();
+            return Response.ok(existingAbteilung).build();
+        }else {
+            return Response.status(Response.Status.NOT_MODIFIED).build();
+        }
+/*        Abteilung existingAbteilung = Abteilung.findById(id);
+        if (existingAbteilung == null) {
+            return Response.status(Response.Status.NOT_FOUND).build();
+        }
+
         existingAbteilung.persist();
         return Response.ok(existingAbteilung).build();
+        if (existingAbteilung.nickname != null) {
+            existingAbteilung.persist(abteilung.nickname);
+            changed = true;
+        }
+        if (existingAbteilung.name != null) {
+            existingAbteilung.persist(abteilung.name);
+            changed = true;
+        }
+
+        if(changed) {
+            existingAbteilung.persist();
+            return Response.ok(existingAbteilung).build();
+        }else {
+            return Response.status(Response.Status.NOT_MODIFIED).build();
+        }
     }
 
     @DELETE
@@ -55,5 +88,5 @@ public class AbteilungResource {
         }
         existingAbteilung.delete();
         return Response.status(Response.Status.NO_CONTENT).build();
-    }
+    }*/
 }
