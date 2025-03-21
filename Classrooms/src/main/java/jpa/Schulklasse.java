@@ -9,14 +9,62 @@ import java.util.List;
 
 @Entity
 public class Schulklasse extends PanacheEntity {
+    private String kennung; // A, B, C, D, E, ...
+    private String nickname; // 2AHWII, 3BFET, ...
     @ManyToOne
-    public Abteilung abteilung;
+    private Abteilung abteilung;
     @ManyToOne
-    public Jahrgang jahrgang;
-    public String kennung; // A, B, C, D, E, ...
-    public String nickname; // 2AHWII, 3BFET, ...
+    private Jahrgang jahrgang;
     @OneToMany(mappedBy = "schulklasse")
-    public List<Student> students;
+    private List<Student> students;
     @OneToMany(mappedBy = "schulklasse")
-    public List<Group> groups;
+    private List<Group> groups;
+
+    public String getKennung() {
+        return kennung;
+    }
+
+    public void setKennung(String kennung) {
+        this.kennung = kennung;
+    }
+
+    public String getNickname() {
+        return nickname;
+    }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
+    }
+
+    public Abteilung getAbteilung() {
+        return abteilung;
+    }
+
+    public void setAbteilung(Abteilung abteilung) {
+        this.abteilung = abteilung;
+    }
+
+    public Jahrgang getJahrgang() {
+        return jahrgang;
+    }
+
+    public void setJahrgang(Jahrgang jahrgang) {
+        this.jahrgang = jahrgang;
+    }
+
+    public List<Student> getStudents() {
+        return students;
+    }
+
+    public void setStudents(List<Student> students) {
+        this.students = students;
+    }
+
+    public List<Group> getGroups() {
+        return groups;
+    }
+
+    public void setGroups(List<Group> groups) {
+        this.groups = groups;
+    }
 }

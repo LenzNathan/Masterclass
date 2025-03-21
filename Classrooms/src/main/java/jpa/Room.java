@@ -9,11 +9,51 @@ import java.util.List;
 
 @Entity
 public class Room extends PanacheEntity {
-    public int number;
-    public String floor; // U, E, 0 bis 4
-    public int capacity;
+    private int number;
+    private String floor; // U, E, 0 bis 4
+    private int capacity;
     @ManyToOne
-    public Building building;
+    private Building building;
     @ManyToMany
-    public List<Tag> tags;
+    private List<Tag> tags;
+
+    public int getNumber() {
+        return number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
+    }
+
+    public String getFloor() {
+        return floor;
+    }
+
+    public void setFloor(String floor) {
+        this.floor = floor;
+    }
+
+    public int getCapacity() {
+        return capacity;
+    }
+
+    public void setCapacity(int capacity) {
+        this.capacity = capacity;
+    }
+
+    public Building getBuilding() {
+        return building;
+    }
+
+    public void setBuilding(Building building) {
+        this.building = building;
+    }
+
+    public List<Tag> getTags() {
+        return tags;
+    }
+
+    public void setTags(List<Tag> tags) {
+        this.tags = tags;
+    }
 }

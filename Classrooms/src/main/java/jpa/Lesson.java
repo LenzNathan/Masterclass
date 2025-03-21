@@ -10,15 +10,63 @@ import java.util.List;
 
 @Entity
 public class Lesson extends PanacheEntity {
-    public Date date;
+    private Date date;
     @ManyToOne
-    public Subject subject;
+    private Subject subject;
     @ManyToOne
-    public Room room;
+    private Room room;
     @ManyToMany
-    public List<Group> groups;
+    private List<Group> groups;
     @ManyToOne
-    public LessonBegin begin;
+    private LessonBegin begin;
     @ManyToOne
-    public LessonEnd end;
+    private LessonEnd end;
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public Subject getSubject() {
+        return subject;
+    }
+
+    public void setSubject(Subject subject) {
+        this.subject = subject;
+    }
+
+    public Room getRoom() {
+        return room;
+    }
+
+    public void setRoom(Room room) {
+        this.room = room;
+    }
+
+    public List<Group> getGroups() {
+        return groups;
+    }
+
+    public void setGroups(List<Group> groups) {
+        this.groups = groups;
+    }
+
+    public LessonBegin getBegin() {
+        return begin;
+    }
+
+    public void setBegin(LessonBegin begin) {
+        this.begin = begin;
+    }
+
+    public LessonEnd getEnd() {
+        return end;
+    }
+
+    public void setEnd(LessonEnd end) {
+        this.end = end;
+    }
 }

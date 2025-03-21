@@ -8,12 +8,60 @@ import java.util.List;
 
 @Entity
 public class Subject extends PanacheEntity {
-    public String name;
-    public int hoursPerWeek;
-    public int maxHoursPerDay;
-    public int minHoursPerDay; //if the subject is taught on this day, it must be at least this amount of hours
+    private String name;
+    private int hoursPerWeek;
+    private int maxHoursPerDay;
+    private int minHoursPerDay; //if the subject is taught on this day, it must be at least this amount of hours
     @ManyToMany
-    public List<Tag> tagsUseful;
+    private List<Tag> tagsUseful;
     @ManyToMany
-    public List<Tag> tagsRequired;
+    private List<Tag> tagsRequired;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getHoursPerWeek() {
+        return hoursPerWeek;
+    }
+
+    public void setHoursPerWeek(int hoursPerWeek) {
+        this.hoursPerWeek = hoursPerWeek;
+    }
+
+    public int getMaxHoursPerDay() {
+        return maxHoursPerDay;
+    }
+
+    public void setMaxHoursPerDay(int maxHoursPerDay) {
+        this.maxHoursPerDay = maxHoursPerDay;
+    }
+
+    public int getMinHoursPerDay() {
+        return minHoursPerDay;
+    }
+
+    public void setMinHoursPerDay(int minHoursPerDay) {
+        this.minHoursPerDay = minHoursPerDay;
+    }
+
+    public List<Tag> getTagsUseful() {
+        return tagsUseful;
+    }
+
+    public void setTagsUseful(List<Tag> tagsUseful) {
+        this.tagsUseful = tagsUseful;
+    }
+
+    public List<Tag> getTagsRequired() {
+        return tagsRequired;
+    }
+
+    public void setTagsRequired(List<Tag> tagsRequired) {
+        this.tagsRequired = tagsRequired;
+    }
 }
