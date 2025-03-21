@@ -19,7 +19,7 @@ PUT http://localhost:8080/abteilung/1
 Content-Type: application/json
 
 {
-  "name": "Geb___changed"
+  "name": "Maschinenbau"
 }
 
 ###
