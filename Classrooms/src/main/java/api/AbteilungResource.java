@@ -5,7 +5,6 @@ import jakarta.transaction.Transactional;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
-
 import java.util.List;
 
 @Path("/abteilung")
@@ -14,7 +13,7 @@ import java.util.List;
 public class AbteilungResource {
 
     @GET
-    public List<Abteilung> getAllAbteilungen() {
+    public List<Abteilung> getAllAbteilung() {
         return Abteilung.listAll();
     }
 
@@ -65,11 +64,11 @@ public class AbteilungResource {
     @Path("/{id}")
     @Transactional
     public Response deleteAbteilung(@PathParam("id") Integer id) {
-        Abteilung a = Abteilung.findById(id);
-        if (a == null){
+        Abteilung abteilung = Abteilung.findById(id);
+        if (abteilung == null){
             return Response.status(Response.Status.NOT_FOUND).build();
         }else {
-            a.delete();
+            abteilung.delete();
             return Response.status(Response.Status.NO_CONTENT).build();
         }
     }
