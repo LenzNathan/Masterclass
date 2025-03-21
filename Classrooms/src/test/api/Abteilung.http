@@ -1,11 +1,11 @@
 ###
-GET http://localhost:8080/Abteilung
+GET http://localhost:8080/abteilung
 Content-Type: */*
 ###
-GET http://localhost:8080/Abteilung/1
+GET http://localhost:8080/abteilung/1
 ###
 
-POST http://localhost:8080/Abteilung
+POST http://localhost:8080/abteilung
 Content-Type: application/json
 
 {
@@ -15,7 +15,7 @@ Content-Type: application/json
 
 ###
 
-PUT http://localhost:8080/Abteilung/1
+PUT http://localhost:8080/abteilung/1
 Content-Type: application/json
 
 {
@@ -24,4 +24,4 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:8080/Abteilung/1
+DELETE http://localhost:8080/abteilung/1
