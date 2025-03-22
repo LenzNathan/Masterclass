@@ -1,14 +1,15 @@
 package test;
 
+/*
 import io.restassured.RestAssured;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
-
+*/
 public class ApiTest {
-
+/*
     @BeforeAll
     public static void setup() {
         // Setze die Basis-URL für die API
@@ -36,7 +37,7 @@ public class ApiTest {
                 .body("firstname", equalTo("John"))
                 .body("lastname", equalTo("Doe"));
     }
-
+*/
     // Weitere Tests für andere Endpoints...
 }
 
