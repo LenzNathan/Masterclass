@@ -1,0 +1,42 @@
+### GET All Subjects
+GET http://localhost:8080/subjects
+Content-Type: */*
+###
+
+### GET Subject by ID
+GET http://localhost:8080/subjects/1
+Content-Type: */*
+###
+
+### POST Create a Subject
+POST http://localhost:8080/subjects
+Content-Type: application/json
+
+{
+  "name": "Mathematics",
+  "hoursPerWeek": 5,
+  "maxHoursPerDay": 4,
+  "minHoursPerDay": 1,
+  "tagsUseful": "Algebra, Calculus",
+  "tagsRequired": "Basic Math"
+}
+###
+
+### PUT Update a Subject
+PUT http://localhost:8080/subjects/1
+Content-Type: application/json
+
+{
+  "name": "Advanced Mathematics",
+  "hoursPerWeek": 6,
+  "maxHoursPerDay": 5,
+  "minHoursPerDay": 2,
+  "tagsUseful": "Algebra, Calculus, Geometry",
+  "tagsRequired": "Basic Math, Trigonometry"
+}
+###
+
+### DELETE Subject by ID
+DELETE http://localhost:8080/subjects/1
+Content-Type: */*
+###

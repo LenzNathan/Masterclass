@@ -1,0 +1,40 @@
+### GET All Jahrgangs
+GET http://localhost:8080/jahrgaenge
+Content-Type: */*
+###
+
+### GET Jahrgang by ID
+GET http://localhost:8080/jahrgaenge/1
+Content-Type: */*
+###
+
+### POST Create a Jahrgang
+POST http://localhost:8080/jahrgaenge
+Content-Type: application/json
+
+{
+  "stufe": 10,
+  "abteilung": {
+    "nickname": "Wirtschaftsingenieure",
+    "name": "Wirtschaftsingenieure"
+  }
+}
+###
+
+### PUT Update a Jahrgang
+PUT http://localhost:8080/jahrgaenge/1
+Content-Type: application/json
+
+{
+  "stufe": 11,
+  "abteilung": {
+    "nickname": "Techniker",
+    "name": "Techniker"
+  }
+}
+###
+
+### DELETE Jahrgang by ID
+DELETE http://localhost:8080/jahrgaenge/1
+Content-Type: */*
+###

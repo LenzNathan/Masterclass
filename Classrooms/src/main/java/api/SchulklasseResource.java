@@ -1,11 +1,12 @@
 package api;
 
-//import de.example.model.Schulklasse;
+import jpa.Schulklasse;
+import jakarta.transaction.Transactional;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.List;
-/*
+
 @Path("/schulklassen")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
@@ -17,6 +18,7 @@ public class SchulklasseResource {
     }
 
     @POST
+    @Transactional
     public Response createSchulklasse(Schulklasse schulklasse) {
         schulklasse.persist();
         return Response.status(Response.Status.CREATED).entity(schulklasse).build();
@@ -30,20 +32,52 @@ public class SchulklasseResource {
 
     @PUT
     @Path("/{id}")
+    @Transactional
     public Response updateSchulklasse(@PathParam("id") Integer id, Schulklasse schulklasse) {
         Schulklasse existingSchulklasse = Schulklasse.findById(id);
         if (existingSchulklasse == null) {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
-        existingSchulklasse.klassenId = schulklasse.klassenId;
-        existingSchulklasse.jahrgang = schulklasse.jahrgang;
-        existingSchulklasse.abteilung = schulklasse.abteilung;
-        existingSchulklasse.persist();
-        return Response.ok(existingSchulklasse).build();
+
+        boolean changed = false;
+
+        // Update 'kennung' if it's different from the existing one
+        if (existingSchulklasse.getKennung() != null && !existingSchulklasse.getKennung().equals(schulklasse.getKennung())) {
+            existingSchulklasse.setKennung(schulklasse.getKennung());
+            changed = true;
+        }
+
+        // Update 'nickname' if it's different from the existing one
+        if (existingSchulklasse.getNickname() != null && !existingSchulklasse.getNickname().equals(schulklasse.getNickname())) {
+            existingSchulklasse.setNickname(schulklasse.getNickname());
+            changed = true;
+        }
+
+        // Update 'abteilung' if it's different from the existing one
+        if (existingSchulklasse.getAbteilung() != null && !existingSchulklasse.getAbteilung().equals(schulklasse.getAbteilung())) {
+            existingSchulklasse.setAbteilung(schulklasse.getAbteilung());
+            changed = true;
+        }
+
+        // Update 'jahrgang' if it's different from the existing one
+        if (existingSchulklasse.getJahrgang() != null && !existingSchulklasse.getJahrgang().equals(schulklasse.getJahrgang())) {
+            existingSchulklasse.setJahrgang(schulklasse.getJahrgang());
+            changed = true;
+        }
+
+        // Persist changes only if something has changed
+        if (changed) {
+            existingSchulklasse.persist();
+            return Response.status(Response.Status.OK).entity(existingSchulklasse).build();
+        } else {
+            return Response.status(Response.Status.NOT_MODIFIED).build();
+        }
     }
+
 
     @DELETE
     @Path("/{id}")
+    @Transactional
     public Response deleteSchulklasse(@PathParam("id") Integer id) {
         Schulklasse existingSchulklasse = Schulklasse.findById(id);
         if (existingSchulklasse == null) {
@@ -53,5 +87,3 @@ public class SchulklasseResource {
         return Response.status(Response.Status.NO_CONTENT).build();
     }
 }
-
-*/

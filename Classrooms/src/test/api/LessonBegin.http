@@ -1,0 +1,34 @@
+### GET All LessonBegins
+GET http://localhost:8080/lesson-starts
+Content-Type: */*
+###
+
+### GET LessonBegin by ID
+GET http://localhost:8080/lesson-starts/1
+Content-Type: */*
+###
+
+### POST Create a LessonBegin
+POST http://localhost:8080/lesson-starts
+Content-Type: application/json
+
+{
+  "lessonNumber": 1,
+  "time": "08:00:00"
+}
+###
+
+### PUT Update a LessonBegin
+PUT http://localhost:8080/lesson-starts/1
+Content-Type: application/json
+
+{
+  "lessonNumber": 2,
+  "time": "09:00:00"
+}
+###
+
+### DELETE LessonBegin by ID
+DELETE http://localhost:8080/lesson-starts/1
+Content-Type: */*
+###

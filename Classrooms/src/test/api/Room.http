@@ -1,0 +1,40 @@
+### GET All Rooms
+GET http://localhost:8080/rooms
+Content-Type: */*
+###
+
+### GET Room by ID
+GET http://localhost:8080/rooms/1
+Content-Type: */*
+###
+
+### POST Create a Room
+POST http://localhost:8080/rooms
+Content-Type: application/json
+
+{
+  "number": "101",
+  "floor": "1",
+  "capacity": 30,
+  "building": "Main Building",
+  "tags": ["Lecture", "Projector"]
+}
+###
+
+### PUT Update a Room
+PUT http://localhost:8080/rooms/1
+Content-Type: application/json
+
+{
+  "number": "102",
+  "floor": "1",
+  "capacity": 35,
+  "building": "Main Building",
+  "tags": ["Lecture", "Projector", "Air Conditioned"]
+}
+###
+
+### DELETE Room by ID
+DELETE http://localhost:8080/rooms/1
+Content-Type: */*
+###

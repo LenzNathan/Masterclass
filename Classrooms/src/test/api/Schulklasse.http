@@ -1,0 +1,38 @@
+### GET All Schulklassen
+GET http://localhost:8080/schulklassen
+Content-Type: */*
+###
+
+### GET Schulklasse by ID
+GET http://localhost:8080/schulklassen/1
+Content-Type: */*
+###
+
+### POST Create a Schulklasse
+POST http://localhost:8080/schulklassen
+Content-Type: application/json
+
+{
+  "kennung": "10A",
+  "nickname": "Class A",
+  "abteilung": "Science",
+  "jahrgang": "2025"
+}
+###
+
+### PUT Update a Schulklasse
+PUT http://localhost:8080/schulklassen/1
+Content-Type: application/json
+
+{
+  "kennung": "10B",
+  "nickname": "Class B",
+  "abteilung": "Math",
+  "jahrgang": "2026"
+}
+###
+
+### DELETE Schulklasse by ID
+DELETE http://localhost:8080/schulklassen/1
+Content-Type: */*
+###

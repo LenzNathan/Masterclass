@@ -1,0 +1,23 @@
+### GET All Tags
+GET http://localhost:8080/tags
+Content-Type: */*
+###
+
+### GET Tag by ID
+GET http://localhost:8080/tags/1
+Content-Type: */*
+###
+
+### POST Create a Tag
+POST http://localhost:8080/tags
+Content-Type: application/json
+
+{
+  "name": "Mathematics"
+}
+###
+
+### DELETE Tag by ID
+DELETE http://localhost:8080/tags/1
+Content-Type: */*
+###

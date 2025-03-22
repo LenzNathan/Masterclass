@@ -1,0 +1,38 @@
+### GET All Students
+GET http://localhost:8080/students
+Content-Type: */*
+###
+
+### GET Student by ID
+GET http://localhost:8080/students/1
+Content-Type: */*
+###
+
+### POST Create a Student
+POST http://localhost:8080/students
+Content-Type: application/json
+
+{
+  "firstname": "John",
+  "lastname": "Doe",
+  "schulklasse": "10A",
+  "group": "A1"
+}
+###
+
+### PUT Update a Student
+PUT http://localhost:8080/students/1
+Content-Type: application/json
+
+{
+  "firstname": "Jane",
+  "lastname": "Doe",
+  "schulklasse": "10B",
+  "group": "B1"
+}
+###
+
+### DELETE Student by ID
+DELETE http://localhost:8080/students/1
+Content-Type: */*
+###

@@ -1,0 +1,38 @@
+### GET All Teachers
+GET http://localhost:8080/teachers
+Content-Type: */*
+###
+
+### GET Teacher by ID
+GET http://localhost:8080/teachers/1
+Content-Type: */*
+###
+
+### POST Create a Teacher
+POST http://localhost:8080/teachers
+Content-Type: application/json
+
+{
+  "firstname": "John",
+  "lastname": "Doe",
+  "nickname": "Johnny",
+  "tags": ["Math", "Science"]
+}
+###
+
+### PUT Update a Teacher
+PUT http://localhost:8080/teachers/1
+Content-Type: application/json
+
+{
+  "firstname": "John",
+  "lastname": "Smith",
+  "nickname": "Johnny",
+  "tags": ["Math", "History"]
+}
+###
+
+### DELETE Teacher by ID
+DELETE http://localhost:8080/teachers/1
+Content-Type: */*
+###

@@ -1,0 +1,60 @@
+### GET All Groups
+GET http://localhost:8080/groups
+Content-Type: */*
+###
+
+### GET Group by ID
+GET http://localhost:8080/groups/1
+Content-Type: */*
+###
+
+### POST Create a Group
+POST http://localhost:8080/groups
+Content-Type: application/json
+
+{
+  "kennung": "GroupA",
+  "schulklasse": {
+    "kennung": "2A",
+    "nickname": "2A - Wirtschaft"
+  },
+  "students": [
+    {
+      "firstname": "John",
+      "lastname": "Doe"
+    },
+    {
+      "firstname": "Jane",
+      "lastname": "Smith"
+    }
+  ]
+}
+###
+
+### PUT Update a Group
+PUT http://localhost:8080/groups/1
+Content-Type: application/json
+
+{
+  "kennung": "GroupA_Updated",
+  "schulklasse": {
+    "kennung": "3B",
+    "nickname": "3B - Technik"
+  },
+  "students": [
+    {
+      "firstname": "John",
+      "lastname": "Doe"
+    },
+    {
+      "firstname": "Alice",
+      "lastname": "Johnson"
+    }
+  ]
+}
+###
+
+### DELETE Group by ID
+DELETE http://localhost:8080/groups/1
+Content-Type: */*
+###

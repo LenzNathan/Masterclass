@@ -1,0 +1,42 @@
+### GET All Lessons
+GET http://localhost:8080/lessons
+Content-Type: */*
+###
+
+### GET Lesson by ID
+GET http://localhost:8080/lessons/1
+Content-Type: */*
+###
+
+### POST Create a Lesson
+POST http://localhost:8080/lessons
+Content-Type: application/json
+
+{
+  "date": "2025-03-22",
+  "subject": "Mathematics",
+  "room": "101",
+  "groups": ["Group A", "Group B"],
+  "begin": "08:00:00",
+  "end": "09:30:00"
+}
+###
+
+### PUT Update a Lesson
+PUT http://localhost:8080/lessons/1
+Content-Type: application/json
+
+{
+  "date": "2025-03-23",
+  "subject": "Physics",
+  "room": "102",
+  "groups": ["Group A", "Group C"],
+  "begin": "09:00:00",
+  "end": "10:30:00"
+}
+###
+
+### DELETE Lesson by ID
+DELETE http://localhost:8080/lessons/1
+Content-Type: */*
+###
