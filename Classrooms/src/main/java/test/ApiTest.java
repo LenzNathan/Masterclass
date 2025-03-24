@@ -37,6 +37,6 @@ public class ApiTest {
                 .body("lastname", equalTo("Doe"));
     }
 
-    // Weitere Tests für andere Endpoints...
+    // Weitere Tests für andere Endpoints ...
 }
 
