@@ -39,4 +39,3 @@ public class ApiTest {
 
     // Weitere Tests für andere Endpoints ...
 }
-
