@@ -1,0 +1,174 @@
+#1
+DELETE http://localhost:8080/abteilungen/all
+###2
+DELETE http://localhost:8080/buildings/all
+###3
+DELETE http://localhost:8080/lesson-starts/all
+###4
+DELETE http://localhost:8080/lesson-ends/all
+###5
+POST http://localhost:8080/abteilungen
+Content-Type: application/json
+
+{
+  "nickname":"WI",
+  "name":"Wirtschaftsingenieure"
+}
+###6
+POST http://localhost:8080/abteilungen
+Content-Type: application/json
+
+{
+  "nickname":"IT",
+  "name":"Informationstechnologie"
+}
+###7
+POST http://localhost:8080/abteilungen
+Content-Type: application/json
+
+{
+  "nickname":"ME",
+  "name":"Maschinenbau"
+}
+###8
+POST http://localhost:8080/abteilungen
+Content-Type: application/json
+
+{
+  "nickname":"BWL",
+  "name":"Betriebswirtschaftslehre"
+}
+###9
+GET http://localhost:8080/abteilungen
+###10
+POST http://localhost:8080/buildings
+Content-Type: application/json
+
+{
+  "name":"Anichstraße",
+  "kuerzel":"A"
+}
+###11
+POST http://localhost:8080/buildings
+Content-Type: application/json
+
+{
+  "name":"Innrain",
+  "kuerzel":"I"
+}
+###12
+POST http://localhost:8080/buildings
+Content-Type: application/json
+
+{
+  "name":"Stoeckl",
+  "kuerzel":"S"
+}
+###13
+POST http://localhost:8080/buildings
+Content-Type: application/json
+
+{
+  "name":"Hofueberbau",
+  "kuerzel":"H"
+}
+###14
+GET http://localhost:8080/buildings
+###15
+POST http://localhost:8080/lesson-starts
+Content-Type: application/json
+
+{
+  "lessonNumber": 1,
+  "time": "08:00:00"
+}
+###16
+POST http://localhost:8080/lesson-starts
+Content-Type: application/json
+
+{
+  "lessonNumber": 2,
+  "time": "08:50:00"
+}
+###17
+POST http://localhost:8080/lesson-starts
+Content-Type: application/json
+
+{
+  "lessonNumber": 3,
+  "time": "09:55:00"
+}
+###18
+POST http://localhost:8080/lesson-starts
+Content-Type: application/json
+
+{
+  "lessonNumber": 4,
+  "time": "10:45:00"
+}
+###19
+GET http://localhost:8080/lesson-starts
+###20
+POST http://localhost:8080/lesson-ends
+Content-Type: application/json
+
+{
+  "lessonNumber": 1,
+  "time": "08:50:00"
+}
+###21
+POST http://localhost:8080/lesson-ends
+Content-Type: application/json
+
+{
+  "lessonNumber": 2,
+  "time": "09:40:00"
+}
+###22
+POST http://localhost:8080/lesson-ends
+Content-Type: application/json
+
+{
+  "lessonNumber": 3,
+  "time": "10:45:00"
+}
+###23
+GET http://localhost:8080/lesson-ends/
+###24
+POST http://localhost:8080/tags
+Content-Type: application/json
+
+{
+  "name": "Fraesen"
+}
+###25
+POST http://localhost:8080/tags
+Content-Type: application/json
+
+{
+  "name": "Drehen"
+}
+###26
+POST http://localhost:8080/tags
+Content-Type: application/json
+
+{
+  "name": "Bohren"
+}
+###27
+POST http://localhost:8080/tags
+Content-Type: application/json
+
+{
+  "name": "Feilen"
+}
+###28
+POST http://localhost:8080/tags
+Content-Type: application/json
+
+{
+  "name": "Stanzen"
+}
+###29
+GET http://localhost:8080/tags/
+###30

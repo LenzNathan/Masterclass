@@ -31,6 +31,29 @@ Content-Type: application/json
 }
 ###
 
+### POST Create a New Group
+POST http://localhost:8080/groups
+Content-Type: application/json
+
+{
+  "kennung": "GroupB",
+  "schulklasse": {
+    "kennung": "3C",
+    "nickname": "3C - Informatik"
+  },
+  "students": [
+    {
+      "firstname": "Alice",
+      "lastname": "Brown"
+    },
+    {
+      "firstname": "Bob",
+      "lastname": "White"
+    }
+  ]
+}
+###
+
 ### PUT Update a Group
 PUT http://localhost:8080/groups/1
 Content-Type: application/json
