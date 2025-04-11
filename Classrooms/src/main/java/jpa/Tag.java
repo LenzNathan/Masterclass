@@ -7,6 +7,6 @@ import jakarta.persistence.Entity;
 public class Tag extends PanacheEntity {
     private String name;
     public String getName() {
-        return name;
+        return this.name = name;
     }
 }
