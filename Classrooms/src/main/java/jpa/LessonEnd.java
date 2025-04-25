@@ -1,16 +1,17 @@
 package jpa;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
+import jakarta.json.bind.annotation.JsonbTypeAdapter;
 import jakarta.persistence.Entity;
-
 import java.sql.Time;
 
 @Entity
 public class LessonEnd extends PanacheEntity {
-    private static int lessonNumber;
-    private static Time time;
+    private int lessonNumber;
+    @JsonbTypeAdapter(SqlTimeAdapter.class)
+    private Time time;
 
-    public static int getLessonNumber() {
+    public int getLessonNumber() {
         return lessonNumber;
     }
 
@@ -18,7 +19,7 @@ public class LessonEnd extends PanacheEntity {
         this.lessonNumber = lessonNumber;
     }
 
-    public static Time getTime() {
+    public Time getTime() {
         return time;
     }
 

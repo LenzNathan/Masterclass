@@ -44,12 +44,12 @@ public class LessonEndResource {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
 
-        if (LessonEnd.getLessonNumber() != 0) {
-            existingLessonEnd.setLessonNumber(LessonEnd.getLessonNumber());
+        if (lessonEnd.getLessonNumber() != 0) {
+            existingLessonEnd.setLessonNumber(lessonEnd.getLessonNumber());
             changed = true;
         }
-        if (LessonEnd.getTime() != null) {
-            existingLessonEnd.setTime(LessonEnd.getTime());
+        if (lessonEnd.getTime() != null) {
+            existingLessonEnd.setTime(lessonEnd.getTime());
             changed = true;
         }
 
