@@ -5,24 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="587a7cc1-baf1-4428-901b-26e830fd2e7f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Frontend/Kivy2.0/.idea/Kivy2.0.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/Masterclass.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Kivy/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Kivy/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Kivy/.idea/Kivy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Kivy/.idea/Kivy.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Kivy/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Kivy/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Kivy/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Kivy/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Kivy2.0/flaskServer.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Kivy2.0/flaskServer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/Kivy2.0/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Kivy2.0/Main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,25 +30,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.Build Classrooms.executor": "Run",
-    "Quarkus.Classrooms.main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "frontend",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/silva/Documents/WII-Masterclass/Classrooms",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.Build Classrooms.executor&quot;: &quot;Run&quot;,
+    &quot;Quarkus.Classrooms.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;frontend&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/silva/Documents/WII-Masterclass/Classrooms&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Classrooms.main" type="QuarkusRunConfigurationType" factoryName="Quarkus" nameIsGenerated="true">
       <module name="Classrooms.main" />
@@ -111,7 +96,8 @@
       <option name="presentableId" value="Default" />
       <updated>1744380904704</updated>
       <workItem from="1744380905778" duration="839000" />
-      <workItem from="1745554289484" duration="40000" />
+      <workItem from="1745554289484" duration="1468000" />
+      <workItem from="1745585432562" duration="665000" />
     </task>
     <servers />
   </component>

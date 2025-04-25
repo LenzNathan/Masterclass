@@ -4,7 +4,7 @@ import requests
 
 app = Flask(__name__)
 
-KEYCLOAK_TOKEN_URL = "http://localhost:8080/realms/stundenplanApp/protocol/openid-connect/token"
+KEYCLOAK_TOKEN_URL = "http://localhost:8180/realms/stundenplanApp/protocol/openid-connect/token"
 CLIENT_ID = "kivyClient"
 CLIENT_SECRET = "zQmolcGt78XHLejZjkVn3DXXUDvgkS34"
 REDIRECT_URI = "http://localhost:5001/authenticationKey"
