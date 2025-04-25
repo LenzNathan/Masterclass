@@ -1,0 +1,664 @@
+GET http://localhost:8080/teachers
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-04-25T125715-1.200.json
+
+###
+
+POST http://localhost:8080/teachers
+Content-Type: application/json
+Content-Length: 72
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "nickname": "LangT",
+  "firstname": "Thomas",
+  "lastname": "Lang"
+}
+
+<> 2025-04-25T125715-5.201.json
+
+###
+
+POST http://localhost:8080/teachers
+Content-Type: application/json
+Content-Length: 77
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "nickname": "WinkG",
+  "firstname": "Günther",
+  "lastname": "Winkler"
+}
+
+<> 2025-04-25T125715-4.201.json
+
+###
+
+POST http://localhost:8080/teachers
+Content-Type: application/json
+Content-Length: 71
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "nickname": "BaumJ",
+  "firstname": "Josef",
+  "lastname": "Baum"
+}
+
+<> 2025-04-25T125715-3.201.json
+
+###
+
+POST http://localhost:8080/teachers
+Content-Type: application/json
+Content-Length: 76
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "nickname": "MeisR",
+  "firstname": "Raphael",
+  "lastname": "Meister"
+}
+
+<> 2025-04-25T125715-2.201.json
+
+###
+
+POST http://localhost:8080/teachers
+Content-Type: application/json
+Content-Length: 194
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "nickname": "MustM",
+  "firstname": "Max",
+  "lastname": "Mustermann",
+  "tags": [
+    {
+      "id": 1,
+      "name": "Stanzen"
+    },
+    {
+      "id": 2,
+      "name": "Bohren"
+    }
+  ]
+}
+
+<> 2025-04-25T125715-1.201.json
+
+###
+
+GET http://localhost:8080/tags/
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-04-25T125715.200.json
+
+###
+
+POST http://localhost:8080/tags
+Content-Type: application/json
+Content-Length: 23
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "Stanzen"
+}
+
+<> 2025-04-25T125715.201.json
+
+###
+
+POST http://localhost:8080/tags
+Content-Type: application/json
+Content-Length: 22
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "Feilen"
+}
+
+<> 2025-04-25T125714-6.201.json
+
+###
+
+POST http://localhost:8080/tags
+Content-Type: application/json
+Content-Length: 22
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "Bohren"
+}
+
+<> 2025-04-25T125714-5.201.json
+
+###
+
+POST http://localhost:8080/tags
+Content-Type: application/json
+Content-Length: 22
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "Drehen"
+}
+
+<> 2025-04-25T125714-4.201.json
+
+###
+
+POST http://localhost:8080/tags
+Content-Type: application/json
+Content-Length: 23
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "Fraesen"
+}
+
+<> 2025-04-25T125714-3.201.json
+
+###
+
+GET http://localhost:8080/lesson-ends/
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-04-25T125714.200.json
+
+###
+
+POST http://localhost:8080/lesson-ends
+Content-Type: application/json
+Content-Length: 45
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "lessonNumber": 3,
+  "time": "10:45:00"
+}
+
+<> 2025-04-25T125714-2.201.json
+
+###
+
+POST http://localhost:8080/lesson-ends
+Content-Type: application/json
+Content-Length: 45
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "lessonNumber": 2,
+  "time": "09:40:00"
+}
+
+<> 2025-04-25T125714-1.201.json
+
+###
+
+POST http://localhost:8080/lesson-ends
+Content-Type: application/json
+Content-Length: 45
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "lessonNumber": 1,
+  "time": "08:50:00"
+}
+
+<> 2025-04-25T125714.201.json
+
+###
+
+GET http://localhost:8080/lesson-starts
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-04-25T125713-1.200.json
+
+###
+
+POST http://localhost:8080/lesson-starts
+Content-Type: application/json
+Content-Length: 45
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "lessonNumber": 4,
+  "time": "10:45:00"
+}
+
+<> 2025-04-25T125713-6.201.json
+
+###
+
+POST http://localhost:8080/lesson-starts
+Content-Type: application/json
+Content-Length: 45
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "lessonNumber": 3,
+  "time": "09:55:00"
+}
+
+<> 2025-04-25T125713-5.201.json
+
+###
+
+POST http://localhost:8080/lesson-starts
+Content-Type: application/json
+Content-Length: 45
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "lessonNumber": 2,
+  "time": "08:50:00"
+}
+
+<> 2025-04-25T125713-4.201.json
+
+###
+
+POST http://localhost:8080/lesson-starts
+Content-Type: application/json
+Content-Length: 45
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "lessonNumber": 1,
+  "time": "08:00:00"
+}
+
+<> 2025-04-25T125713-3.201.json
+
+###
+
+GET http://localhost:8080/buildings
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-04-25T125713.200.json
+
+###
+
+POST http://localhost:8080/buildings
+Content-Type: application/json
+Content-Length: 43
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name":"Hofueberbau",
+  "kuerzel":"H"
+}
+
+<> 2025-04-25T125713-2.201.json
+
+###
+
+POST http://localhost:8080/buildings
+Content-Type: application/json
+Content-Length: 39
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name":"Stoeckl",
+  "kuerzel":"S"
+}
+
+<> 2025-04-25T125713-1.201.json
+
+###
+
+POST http://localhost:8080/buildings
+Content-Type: application/json
+Content-Length: 39
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name":"Innrain",
+  "kuerzel":"I"
+}
+
+<> 2025-04-25T125713.201.json
+
+###
+
+POST http://localhost:8080/buildings
+Content-Type: application/json
+Content-Length: 44
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name":"Anichstraße",
+  "kuerzel":"A"
+}
+
+<> 2025-04-25T125712-4.201.json
+
+###
+
+GET http://localhost:8080/abteilungen
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-04-25T125712.200.json
+
+###
+
+POST http://localhost:8080/abteilungen
+Content-Type: application/json
+Content-Length: 59
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "nickname":"BWL",
+  "name":"Betriebswirtschaftslehre"
+}
+
+<> 2025-04-25T125712-3.201.json
+
+###
+
+POST http://localhost:8080/abteilungen
+Content-Type: application/json
+Content-Length: 46
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "nickname":"ME",
+  "name":"Maschinenbau"
+}
+
+<> 2025-04-25T125712-2.201.json
+
+###
+
+POST http://localhost:8080/abteilungen
+Content-Type: application/json
+Content-Length: 57
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "nickname":"IT",
+  "name":"Informationstechnologie"
+}
+
+<> 2025-04-25T125712-1.201.json
+
+###
+
+POST http://localhost:8080/abteilungen
+Content-Type: application/json
+Content-Length: 55
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "nickname":"WI",
+  "name":"Wirtschaftsingenieure"
+}
+
+<> 2025-04-25T125712.201.json
+
+###
+
+DELETE http://localhost:8080/teachers/all
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+###
+
+DELETE http://localhost:8080/tags/all
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+###
+
+DELETE http://localhost:8080/lesson-ends/all
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+###
+
+DELETE http://localhost:8080/lesson-starts/all
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+###
+
+DELETE http://localhost:8080/buildings/all
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+###
+
+DELETE http://localhost:8080/abteilungen/all
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+###
+
+GET http://localhost:8080/lesson-ends/
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-04-25T125531.200.json
+
+###
+
+POST http://localhost:8080/lesson-ends
+Content-Type: application/json
+Content-Length: 45
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "lessonNumber": 3,
+  "time": "10:45:00"
+}
+
+<> 2025-04-25T125527.201.json
+
+###
+
+POST http://localhost:8080/lesson-ends
+Content-Type: application/json
+Content-Length: 45
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "lessonNumber": 2,
+  "time": "09:40:00"
+}
+
+<> 2025-04-25T125520.201.json
+
+###
+
+GET http://localhost:8080/lesson-starts
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-04-25T124814.200.json
+
+###
+
+POST http://localhost:8080/lesson-starts
+Content-Type: application/json
+Content-Length: 45
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "lessonNumber": 4,
+  "time": "10:45:00"
+}
+
+<> 2025-04-25T124811.201.json
+
+###
+
+GET http://localhost:8080/lesson-starts
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-04-25T124759.200.json
+
+###
+
+POST http://localhost:8080/lesson-ends
+Content-Type: application/json
+Content-Length: 45
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "lessonNumber": 3,
+  "time": "10:45:00"
+}
+
+<> 2025-04-25T124743.201.json
+
+###
+
+GET http://localhost:8080/lesson-ends/
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-04-25T124455.200.json
+
+###
+
+POST http://localhost:8080/lesson-ends
+Content-Type: application/json
+Content-Length: 45
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "lessonNumber": 3,
+  "time": "10:45:00"
+}
+
+<> 2025-04-25T124451.201.json
+
+###
+
+GET http://localhost:8080/lesson-ends/
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-04-25T124435.200.json
+
+###
+
+GET http://localhost:8080/tags/
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-04-25T124420.200.json
+
+###
+
+GET http://localhost:8080/teachers
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-04-25T124349.200.json
+
+###
+
+GET http://localhost:8080/teachers
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-04-25T124237.200.json
+
+###
+

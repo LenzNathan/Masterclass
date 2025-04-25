@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "kuerzel": "A",
+    "name": "Anichstraße"
+  },
+  {
+    "id": 2,
+    "kuerzel": "I",
+    "name": "Innrain"
+  },
+  {
+    "id": 3,
+    "kuerzel": "S",
+    "name": "Stoeckl"
+  },
+  {
+    "id": 4,
+    "kuerzel": "H",
+    "name": "Hofueberbau"
+  }
+]

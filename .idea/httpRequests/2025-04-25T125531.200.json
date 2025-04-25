@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "lessonNumber": 2,
+    "time": "09:40:00"
+  },
+  {
+    "id": 2,
+    "lessonNumber": 3,
+    "time": "10:45:00"
+  }
+]

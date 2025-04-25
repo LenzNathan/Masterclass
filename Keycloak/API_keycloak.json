@@ -1,0 +1,449 @@
+{
+	"info": {
+		"_postman_id": "53cfc065-8113-4553-a246-b41a2a0c201f",
+		"name": "StundenplanAPP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40490020"
+	},
+	"item": [
+		{
+			"name": "signInKeycloak",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_secret",
+							"value": "zQmolcGt78XHLejZjkVn3DXXUDvgkS34",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "silva",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "test1234",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "kivyClient",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "openid",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/realms/stundenplanApp/protocol/openid-connect/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"realms",
+						"stundenplanApp",
+						"protocol",
+						"openid-connect",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signInKeycloak",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_secret",
+							"value": "Et2lwbeqPgabRLPErv2hFMlPgwLBoeXW",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "silvana",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "test1234",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "kivyClient",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/realms/stundenplanApp/account",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"realms",
+						"stundenplanApp",
+						"account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTokenUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_secret",
+							"value": "238d0G4ZfLnouGQI4i8VerP0wfi9XUNV",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "silvana",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "test1234",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "quarkus-client",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/realms/stundenplanAPP/protocol/openid-connect/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"realms",
+						"stundenplanAPP",
+						"protocol",
+						"openid-connect",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tokenAccountKeycloak",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "kivyClient",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "silvana",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "test1234",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "13AfcSRO6tzR6hUUxJKLCKnOqNWcMxxR",
+							"type": "text"
+						},
+						{
+							"key": "scrope",
+							"value": "openid",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/realms/stundenplanApp/protocol/openid-connect/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"realms",
+						"stundenplanApp",
+						"protocol",
+						"openid-connect",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getGeneralUserinfo",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ6SVZ4ZUtOczhYdG0zUHJJMVo3X2lYM0dZSFh6dWMxeGd2Zk5lMldLUHYwIn0.eyJleHAiOjE3NDQzNzcwNzcsImlhdCI6MTc0NDM3Njc3NywianRpIjoiMDMyNWQ1ZTEtNWE4OC00MmVhLWEyZDctZDVmODcyNTJjMWM2IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9zdHVuZGVucGxhbkFwcCIsImF1ZCI6WyJyZWFsbS1tYW5hZ2VtZW50IiwiYnJva2VyIiwiYWNjb3VudCJdLCJzdWIiOiJlNjc5YmRkZS05NzVjLTQ4ZjEtYTgwYi1mYmM3NzcxNGM4OGQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJraXZ5Q2xpZW50Iiwic2lkIjoiZDgzYWM2NjMtZjFkZi00MzM0LThiZGYtNzE3NjZlZmM1ZmQ2IiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyIqIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJkZWZhdWx0LXJvbGVzLXN0dW5kZW5wbGFuYXBwIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsicmVhbG0tbWFuYWdlbWVudCI6eyJyb2xlcyI6WyJ2aWV3LWlkZW50aXR5LXByb3ZpZGVycyIsInZpZXctcmVhbG0iLCJtYW5hZ2UtaWRlbnRpdHktcHJvdmlkZXJzIiwiaW1wZXJzb25hdGlvbiIsInJlYWxtLWFkbWluIiwiY3JlYXRlLWNsaWVudCIsIm1hbmFnZS11c2VycyIsInF1ZXJ5LXJlYWxtcyIsInZpZXctYXV0aG9yaXphdGlvbiIsInF1ZXJ5LWNsaWVudHMiLCJxdWVyeS11c2VycyIsIm1hbmFnZS1ldmVudHMiLCJtYW5hZ2UtcmVhbG0iLCJ2aWV3LWV2ZW50cyIsInZpZXctdXNlcnMiLCJ2aWV3LWNsaWVudHMiLCJtYW5hZ2UtYXV0aG9yaXphdGlvbiIsIm1hbmFnZS1jbGllbnRzIiwicXVlcnktZ3JvdXBzIl19LCJicm9rZXIiOnsicm9sZXMiOlsicmVhZC10b2tlbiJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsInZpZXctYXBwbGljYXRpb25zIiwidmlldy1jb25zZW50Iiwidmlldy1ncm91cHMiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsImRlbGV0ZS1hY2NvdW50IiwibWFuYWdlLWNvbnNlbnQiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGVtYWlsIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsIm5hbWUiOiJTaWx2YSBTY2giLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzaWx2YSIsImdpdmVuX25hbWUiOiJTaWx2YSIsImZhbWlseV9uYW1lIjoiU2NoIiwiZW1haWwiOiJzc2NoZW5uZXRAdHNuLmF0In0.RrwtaAeyK6qgAUi9C2CSwo3owsCsRgWP9oMb7INhR_XbFVGXBqfnoaNXykEh2uALJmFB1yZRowxo-YEnLx1oZHPR0pwYPq_nvd1-4ZMnuu0g-hRmVDvok8FEeH1zi2ezBSxvdnjo4uXtCyW4Rdn8wmcNTlLXwkmpdNjpIdbkfTLG-n2PlWIDUNTBPlrP7WAiGossoKHjRx5SUBYqAlqX7MZV6DoCdf6LcXGN-kX3S8yGlW0cE2lY9HkcUPiq-cdP-RK9qmTGfyz-5TzrO-ZvpwPuQ6JiIEUa_8zwgnIhbKr1wNuiH1DTAFjgysektWPd0erAJ04LuaeeZmwFsW2Vzg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/realms/stundenplanApp/protocol/openid-connect/userinfo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"realms",
+						"stundenplanApp",
+						"protocol",
+						"openid-connect",
+						"userinfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUserIdAndOtherUserInformations",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ6SVZ4ZUtOczhYdG0zUHJJMVo3X2lYM0dZSFh6dWMxeGd2Zk5lMldLUHYwIn0.eyJleHAiOjE3NDQzNzY4NjIsImlhdCI6MTc0NDM3NjU2MiwianRpIjoiYzZlZDcwOTMtOWMwOC00MzlkLWE0OGItZWJkMDk1M2VlNmUxIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9zdHVuZGVucGxhbkFwcCIsImF1ZCI6WyJyZWFsbS1tYW5hZ2VtZW50IiwiYnJva2VyIiwiYWNjb3VudCJdLCJzdWIiOiJlNjc5YmRkZS05NzVjLTQ4ZjEtYTgwYi1mYmM3NzcxNGM4OGQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJraXZ5Q2xpZW50Iiwic2lkIjoiNWYwNzY3OTQtYTMyYy00NzgxLWI2NDMtZWViMWQzNjdlY2YwIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyIqIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJkZWZhdWx0LXJvbGVzLXN0dW5kZW5wbGFuYXBwIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsicmVhbG0tbWFuYWdlbWVudCI6eyJyb2xlcyI6WyJ2aWV3LWlkZW50aXR5LXByb3ZpZGVycyIsInZpZXctcmVhbG0iLCJtYW5hZ2UtaWRlbnRpdHktcHJvdmlkZXJzIiwiaW1wZXJzb25hdGlvbiIsInJlYWxtLWFkbWluIiwiY3JlYXRlLWNsaWVudCIsIm1hbmFnZS11c2VycyIsInF1ZXJ5LXJlYWxtcyIsInZpZXctYXV0aG9yaXphdGlvbiIsInF1ZXJ5LWNsaWVudHMiLCJxdWVyeS11c2VycyIsIm1hbmFnZS1ldmVudHMiLCJtYW5hZ2UtcmVhbG0iLCJ2aWV3LWV2ZW50cyIsInZpZXctdXNlcnMiLCJ2aWV3LWNsaWVudHMiLCJtYW5hZ2UtYXV0aG9yaXphdGlvbiIsIm1hbmFnZS1jbGllbnRzIiwicXVlcnktZ3JvdXBzIl19LCJicm9rZXIiOnsicm9sZXMiOlsicmVhZC10b2tlbiJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsInZpZXctYXBwbGljYXRpb25zIiwidmlldy1jb25zZW50Iiwidmlldy1ncm91cHMiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsImRlbGV0ZS1hY2NvdW50IiwibWFuYWdlLWNvbnNlbnQiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGVtYWlsIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsIm5hbWUiOiJTaWx2YSBTY2giLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzaWx2YSIsImdpdmVuX25hbWUiOiJTaWx2YSIsImZhbWlseV9uYW1lIjoiU2NoIiwiZW1haWwiOiJzc2NoZW5uZXRAdHNuLmF0In0.VDzM27JeQBLLdo7A7ew2QQXjcxL7PySnoOMfhmOtCCFGsfU1a9F02UWrDGsyALijih15mZTXr9yzMvU63evfuhc1XGdIt4M0h95FpLgKoYSM9GRCJUM0tm2GCNAzyFVSdhRSSeUC57vw76H5qMvghvYQC7SNpOf1_OTgyTYaPL6sGuOwISMdZmGZ0edhJFsXFReJT7vI5JlgJlqTBebRnMW0MJT6ytE7GU_Fp6RE8QeqA2AGebc4Zd1UQABa5_KAmv9mlawKNRxYztJIlBb5Blqz1pCcstqA_eyaSSYWBHlyBULV0aFwam1HAOlt9lBrAWEXW7w4oCLbOcLtXdIf4g",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/admin/realms/stundenplanApp/users?email=sschennet@tsn.at",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admin",
+						"realms",
+						"stundenplanApp",
+						"users"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "sschennet@tsn.at"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "gerUserGroup",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ6SVZ4ZUtOczhYdG0zUHJJMVo3X2lYM0dZSFh6dWMxeGd2Zk5lMldLUHYwIn0.eyJleHAiOjE3NDQzNzc0MDIsImlhdCI6MTc0NDM3NzEwMiwianRpIjoiNjdmZDY1NzktNTlhYy00ZDMzLWJkOTEtYzgyMzdhYmY5OGU3IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9zdHVuZGVucGxhbkFwcCIsImF1ZCI6WyJyZWFsbS1tYW5hZ2VtZW50IiwiYnJva2VyIiwiYWNjb3VudCJdLCJzdWIiOiJlNjc5YmRkZS05NzVjLTQ4ZjEtYTgwYi1mYmM3NzcxNGM4OGQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJraXZ5Q2xpZW50Iiwic2lkIjoiYWFhMjExY2QtYjc4ZC00ZmQ5LTlmZGEtOWZlMTM5NjFhMmVlIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyIqIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJkZWZhdWx0LXJvbGVzLXN0dW5kZW5wbGFuYXBwIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsicmVhbG0tbWFuYWdlbWVudCI6eyJyb2xlcyI6WyJ2aWV3LWlkZW50aXR5LXByb3ZpZGVycyIsInZpZXctcmVhbG0iLCJtYW5hZ2UtaWRlbnRpdHktcHJvdmlkZXJzIiwiaW1wZXJzb25hdGlvbiIsInJlYWxtLWFkbWluIiwiY3JlYXRlLWNsaWVudCIsIm1hbmFnZS11c2VycyIsInF1ZXJ5LXJlYWxtcyIsInZpZXctYXV0aG9yaXphdGlvbiIsInF1ZXJ5LWNsaWVudHMiLCJxdWVyeS11c2VycyIsIm1hbmFnZS1ldmVudHMiLCJtYW5hZ2UtcmVhbG0iLCJ2aWV3LWV2ZW50cyIsInZpZXctdXNlcnMiLCJ2aWV3LWNsaWVudHMiLCJtYW5hZ2UtYXV0aG9yaXphdGlvbiIsIm1hbmFnZS1jbGllbnRzIiwicXVlcnktZ3JvdXBzIl19LCJicm9rZXIiOnsicm9sZXMiOlsicmVhZC10b2tlbiJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsInZpZXctYXBwbGljYXRpb25zIiwidmlldy1jb25zZW50Iiwidmlldy1ncm91cHMiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsImRlbGV0ZS1hY2NvdW50IiwibWFuYWdlLWNvbnNlbnQiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGVtYWlsIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsIm5hbWUiOiJTaWx2YSBTY2giLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzaWx2YSIsImdpdmVuX25hbWUiOiJTaWx2YSIsImZhbWlseV9uYW1lIjoiU2NoIiwiZW1haWwiOiJzc2NoZW5uZXRAdHNuLmF0In0.Gy58mZBvxckZXhw8v72_1cet4TLEhy6tc79OlQ5OH5MH-dlCOrkE81QWIiho4PDOpELEy6yyDVo_TG47vx7Ydceav5_ZC-oo4dQP3Q7Lm-Zln7HLVAHQMMG6oIBJHBZgEKbLrLcoogD_5nNQRrVUhox4VlL7mFbTD7oBTbNAAo70n4xQmdQgJVtNBjlvERJAQA6QDw1hQ80zwBdo53FVd9_it8vxejj-g5-7tqzi1XDeOBSZo2KrLwxDb0LaS7VKw5XXRvhE8L6hqLsY2rSDmV_XMTW3I1XAv1AFlOl7yf1fkr4C0xCG866WlC4wGwxXDxpMGlRiweo7QOENHsW8Lw"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/admin/realms/stundenplanApp/users/e679bdde-975c-48f1-a80b-fbc77714c88d/groups",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admin",
+						"realms",
+						"stundenplanApp",
+						"users",
+						"e679bdde-975c-48f1-a80b-fbc77714c88d",
+						"groups"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getLoginMask",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:8080/realms/stundenplanApp/protocol/openid-connect/auth?client_id=kivyClient&redirect_uri=http://localhost:8080/callback&response_type=code",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"realms",
+						"stundenplanApp",
+						"protocol",
+						"openid-connect",
+						"auth"
+					],
+					"query": [
+						{
+							"key": "client_id",
+							"value": "kivyClient"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://localhost:8080/callback"
+						},
+						{
+							"key": "response_type",
+							"value": "code"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTokenWithRefresh",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_id",
+							"value": "kivyClient",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "refresh_token",
+							"type": "text"
+						},
+						{
+							"key": "refresh_token",
+							"value": "eyJhbGciOiJIUzUxMiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJlYmJiNGY1OC1lNTE2LTQxMDgtYTQxYy1lMTdiZGUyMjE1MmMifQ.eyJleHAiOjE3NDQzNzg5MDIsImlhdCI6MTc0NDM3NzEwMiwianRpIjoiMjdjZDYzNjgtOTVmNy00NmQ4LWFmODQtZGM5NDZjNWFlMjJmIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9zdHVuZGVucGxhbkFwcCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9yZWFsbXMvc3R1bmRlbnBsYW5BcHAiLCJzdWIiOiJlNjc5YmRkZS05NzVjLTQ4ZjEtYTgwYi1mYmM3NzcxNGM4OGQiLCJ0eXAiOiJSZWZyZXNoIiwiYXpwIjoia2l2eUNsaWVudCIsInNpZCI6ImFhYTIxMWNkLWI3OGQtNGZkOS05ZmRhLTlmZTEzOTYxYTJlZSIsInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgYmFzaWMgcm9sZXMgc2VydmljZV9hY2NvdW50IHdlYi1vcmlnaW5zIGFjciBlbWFpbCJ9.c1tEzEYqZnXN1Tf3kUxiHlrO-gIQXg_zvoW-UpxUG0vv6pszt2OWCwVG-zXeOo3tgD6gABjXAcmU2E4S8T6tJg",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "zQmolcGt78XHLejZjkVn3DXXUDvgkS34",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/realms/stundenplanApp/protocol/openid-connect/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"realms",
+						"stundenplanApp",
+						"protocol",
+						"openid-connect",
+						"token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
