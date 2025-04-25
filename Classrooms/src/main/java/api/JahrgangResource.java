@@ -2,9 +2,9 @@ package api;
 
 import jpa.Jahrgang;
 import jakarta.transaction.Transactional;
-import javax.ws.rs.*;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
+import jakarta.ws.rs.*;
+import jakarta.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.Response;
 import java.util.List;
 
 @Path("/jahrgaenge")
@@ -72,5 +72,20 @@ public class JahrgangResource {
         }
         existingStufe.delete();
         return Response.status(Response.Status.NO_CONTENT).build();
+    }
+
+    @DELETE
+    @Path("/all")
+    @Transactional
+    public jakarta.ws.rs.core.Response deleteAbteilung() {
+        List<Jahrgang> jahrgaenge = Jahrgang.listAll();
+        if (jahrgaenge.isEmpty()){
+            return jakarta.ws.rs.core.Response.status(jakarta.ws.rs.core.Response.Status.NOT_FOUND).build();
+        }else {
+            for (Jahrgang jahrgang : jahrgaenge) {
+                jahrgang.delete();
+            }
+            return jakarta.ws.rs.core.Response.status(jakarta.ws.rs.core.Response.Status.OK).build();
+        }
     }
 }

@@ -1,5 +1,6 @@
 package api;
 
+import jpa.Schulklasse;
 import jpa.Student;
 import jakarta.transaction.Transactional;
 import javax.ws.rs.*;
@@ -85,5 +86,21 @@ public class StudentResource {
         }
         existingStudent.delete();
         return Response.status(Response.Status.NO_CONTENT).build();
+    }
+
+
+    @DELETE
+    @Path("/all")
+    @Transactional
+    public jakarta.ws.rs.core.Response deleteAbteilung() {
+        List<Student> students = Student.listAll();
+        if (students.isEmpty()){
+            return jakarta.ws.rs.core.Response.status(jakarta.ws.rs.core.Response.Status.NOT_FOUND).build();
+        }else {
+            for (Student student : students) {
+                student.delete();
+            }
+            return jakarta.ws.rs.core.Response.status(jakarta.ws.rs.core.Response.Status.OK).build();
+        }
     }
 }

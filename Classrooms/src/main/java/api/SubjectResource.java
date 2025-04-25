@@ -1,5 +1,6 @@
 package api;
 
+import jpa.Student;
 import jpa.Subject;
 import jakarta.transaction.Transactional;
 import jakarta.ws.rs.*;
@@ -89,12 +90,27 @@ public class SubjectResource {
     @DELETE
     @Path("/{id}")
     @Transactional
-    public Response deleteSubject(@PathParam("id") Integer id) {
+    public javax.ws.rs.core.Response deleteStudent(@PathParam("id") Integer id) {
         Subject existingSubject = Subject.findById(id);
         if (existingSubject == null) {
-            return Response.status(Response.Status.NOT_FOUND).build();
+            return javax.ws.rs.core.Response.status(javax.ws.rs.core.Response.Status.NOT_FOUND).build();
         }
         existingSubject.delete();
-        return Response.status(Response.Status.NO_CONTENT).build();
+        return javax.ws.rs.core.Response.status(javax.ws.rs.core.Response.Status.NO_CONTENT).build();
+    }
+
+    @DELETE
+    @Path("/all")
+    @Transactional
+    public jakarta.ws.rs.core.Response deleteAbteilung() {
+        List<Subject> subjects = Subject.listAll();
+        if (subjects.isEmpty()){
+            return jakarta.ws.rs.core.Response.status(jakarta.ws.rs.core.Response.Status.NOT_FOUND).build();
+        }else {
+            for (Subject subject : subjects) {
+                subject.delete();
+            }
+            return jakarta.ws.rs.core.Response.status(jakarta.ws.rs.core.Response.Status.OK).build();
+        }
     }
 }

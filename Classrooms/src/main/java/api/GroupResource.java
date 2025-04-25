@@ -1,5 +1,6 @@
 package api;
 
+import jpa.Building;
 import jpa.Group;
 import jakarta.transaction.Transactional;
 import jakarta.ws.rs.*;
@@ -74,6 +75,21 @@ public class GroupResource {
         } else {
             existingGroup.delete();
             return Response.status(Response.Status.NO_CONTENT).build();
+        }
+    }
+
+    @DELETE
+    @Path("/all")
+    @Transactional
+    public Response deleteAbteilung() {
+        List<Group> groups = Group.listAll();
+        if (groups.isEmpty()){
+            return Response.status(Response.Status.NOT_FOUND).build();
+        }else {
+            for (Group group : groups) {
+                group.delete();
+            }
+            return Response.status(Response.Status.OK).build();
         }
     }
 }

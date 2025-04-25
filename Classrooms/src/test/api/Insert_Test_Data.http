@@ -6,11 +6,25 @@ DELETE http://localhost:8080/buildings/all
 DELETE http://localhost:8080/lesson-starts/all
 ###4
 DELETE http://localhost:8080/lesson-ends/all
-###
+###5
 DELETE http://localhost:8080/tags/all
-###
+###6
 DELETE http://localhost:8080/teachers/all
-###
+###7
+DELETE http://localhost:8080/groups/all
+###8
+DELETE http://localhost:8080/jahrgaenge/all
+###9
+DELETE http://localhost:8080/lessons/all
+###10
+DELETE http://localhost:8080/rooms/all
+###11
+DELETE http://localhost:8080/schulklassen/all
+###12
+DELETE http://localhost:8080/students/all
+###13
+DELETE http://localhost:8080/subjects/all
+###14
 POST http://localhost:8080/abteilungen
 Content-Type: application/json
 
@@ -18,7 +32,7 @@ Content-Type: application/json
   "nickname":"WI",
   "name":"Wirtschaftsingenieure"
 }
-###6
+###8
 POST http://localhost:8080/abteilungen
 Content-Type: application/json
 
@@ -26,7 +40,7 @@ Content-Type: application/json
   "nickname":"IT",
   "name":"Informationstechnologie"
 }
-###7
+###9
 POST http://localhost:8080/abteilungen
 Content-Type: application/json
 
@@ -34,7 +48,7 @@ Content-Type: application/json
   "nickname":"ME",
   "name":"Maschinenbau"
 }
-###8
+###10
 POST http://localhost:8080/abteilungen
 Content-Type: application/json
 
@@ -42,9 +56,9 @@ Content-Type: application/json
   "nickname":"BWL",
   "name":"Betriebswirtschaftslehre"
 }
-###9
+###11
 GET http://localhost:8080/abteilungen
-###10
+###12
 POST http://localhost:8080/buildings
 Content-Type: application/json
 
@@ -52,7 +66,7 @@ Content-Type: application/json
   "name":"Anichstraße",
   "kuerzel":"A"
 }
-###11
+###13
 POST http://localhost:8080/buildings
 Content-Type: application/json
 
@@ -60,7 +74,7 @@ Content-Type: application/json
   "name":"Innrain",
   "kuerzel":"I"
 }
-###12
+###14
 POST http://localhost:8080/buildings
 Content-Type: application/json
 
@@ -68,7 +82,7 @@ Content-Type: application/json
   "name":"Stoeckl",
   "kuerzel":"S"
 }
-###13
+###15
 POST http://localhost:8080/buildings
 Content-Type: application/json
 
@@ -76,9 +90,9 @@ Content-Type: application/json
   "name":"Hofueberbau",
   "kuerzel":"H"
 }
-###14
+###16
 GET http://localhost:8080/buildings
-###15
+###17
 POST http://localhost:8080/lesson-starts
 Content-Type: application/json
 
@@ -86,7 +100,7 @@ Content-Type: application/json
   "lessonNumber": 1,
   "time": "08:00:00"
 }
-###16
+###18
 POST http://localhost:8080/lesson-starts
 Content-Type: application/json
 
@@ -94,7 +108,7 @@ Content-Type: application/json
   "lessonNumber": 2,
   "time": "08:50:00"
 }
-###17
+###19
 POST http://localhost:8080/lesson-starts
 Content-Type: application/json
 
@@ -102,7 +116,7 @@ Content-Type: application/json
   "lessonNumber": 3,
   "time": "09:55:00"
 }
-###18
+###20
 POST http://localhost:8080/lesson-starts
 Content-Type: application/json
 
@@ -110,9 +124,9 @@ Content-Type: application/json
   "lessonNumber": 4,
   "time": "10:45:00"
 }
-###19
+###21
 GET http://localhost:8080/lesson-starts
-###20
+###22
 POST http://localhost:8080/lesson-ends
 Content-Type: application/json
 
@@ -120,7 +134,7 @@ Content-Type: application/json
   "lessonNumber": 1,
   "time": "08:50:00"
 }
-###21
+###23
 POST http://localhost:8080/lesson-ends
 Content-Type: application/json
 
@@ -128,7 +142,7 @@ Content-Type: application/json
   "lessonNumber": 2,
   "time": "09:40:00"
 }
-###22
+###24
 POST http://localhost:8080/lesson-ends
 Content-Type: application/json
 
@@ -136,46 +150,46 @@ Content-Type: application/json
   "lessonNumber": 3,
   "time": "10:45:00"
 }
-###23
+###25
 GET http://localhost:8080/lesson-ends/
-###24
+###26
 POST http://localhost:8080/tags
 Content-Type: application/json
 
 {
   "name": "Fraesen"
 }
-###25
+###27
 POST http://localhost:8080/tags
 Content-Type: application/json
 
 {
   "name": "Drehen"
 }
-###26
+###28
 POST http://localhost:8080/tags
 Content-Type: application/json
 
 {
   "name": "Bohren"
 }
-###27
+###29
 POST http://localhost:8080/tags
 Content-Type: application/json
 
 {
   "name": "Feilen"
 }
-###28
+###30
 POST http://localhost:8080/tags
 Content-Type: application/json
 
 {
   "name": "Stanzen"
 }
-###29
+###31
 GET http://localhost:8080/tags/
-###30
+###32
 POST http://localhost:8080/teachers
 Content-Type: application/json
 
@@ -194,7 +208,7 @@ Content-Type: application/json
     }
   ]
 }
-###31
+###33
 POST http://localhost:8080/teachers
 Content-Type: application/json
 
@@ -203,7 +217,7 @@ Content-Type: application/json
   "firstname": "Raphael",
   "lastname": "Meister"
 }
-###32
+###34
 POST http://localhost:8080/teachers
 Content-Type: application/json
 
@@ -212,7 +226,7 @@ Content-Type: application/json
   "firstname": "Josef",
   "lastname": "Baum"
 }
-###33
+###35
 POST http://localhost:8080/teachers
 Content-Type: application/json
 
@@ -221,7 +235,7 @@ Content-Type: application/json
   "firstname": "Günther",
   "lastname": "Winkler"
 }
-###34
+###36
 POST http://localhost:8080/teachers
 Content-Type: application/json
 
@@ -230,5 +244,21 @@ Content-Type: application/json
   "firstname": "Thomas",
   "lastname": "Lang"
 }
-###35
+###37
 GET http://localhost:8080/teachers
+###38
+POST http://localhost:8080/groups
+Content-Type: application/json
+
+{
+"kennung": "A"
+ }
+###39
+POST http://localhost:8080/jahrgaenge
+Content-Type: application/json
+
+{
+  "stufe": 1
+}
+###40
+GET http://localhost:8080/jahrgaenge

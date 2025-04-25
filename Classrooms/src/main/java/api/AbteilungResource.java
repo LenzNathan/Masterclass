@@ -72,4 +72,19 @@ public class AbteilungResource {
             return Response.status(Response.Status.NO_CONTENT).build();
         }
     }
+
+    @DELETE
+    @Path("/all")
+    @Transactional
+    public Response deleteAbteilung() {
+        List<Abteilung> abteilungen = Abteilung.listAll();
+        if (abteilungen.isEmpty()){
+            return Response.status(Response.Status.NOT_FOUND).build();
+        }else {
+            for (Abteilung abteilung : abteilungen) {
+                abteilung.delete();
+            }
+            return Response.status(Response.Status.OK).build();
+        }
+    }
 }

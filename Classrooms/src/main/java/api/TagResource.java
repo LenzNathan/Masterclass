@@ -1,10 +1,11 @@
 package api;
 
-import jpa.Tag;
 import jakarta.transaction.Transactional;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
+import jpa.Tag;
+
 import java.util.List;
 
 @Path("/tags")
@@ -28,37 +29,38 @@ public class TagResource {
     @Path("/{id}")
     public Response getTag(@PathParam("id") Integer id) {
         Tag t = Tag.findById(id);
-        if (t == null){
+        if (t == null) {
             return Response.status(Response.Status.NOT_FOUND).build();
-        }else {
+        } else {
             return Response.status(Response.Status.OK).entity(t).build();
         }
     }
-/* no set method in Tag.java
-    @PUT
-    @Path("/{id}")
-    @Transactional
-    public Response updateTag(@PathParam("id") Integer id, Tag tag) {
-        boolean changed = false;
-        Tag existingTag = Tag.findById(id);
 
-        if (existingTag == null) {
-            return Response.status(Response.Status.NOT_FOUND).build();
-        }
+    /* no set method in Tag.java
+        @PUT
+        @Path("/{id}")
+        @Transactional
+        public Response updateTag(@PathParam("id") Integer id, Tag tag) {
+            boolean changed = false;
+            Tag existingTag = Tag.findById(id);
 
-        if (tag.getName() != null) {
-            existingTag.setName(tag.getTagName());
-            changed = true;
-        }
+            if (existingTag == null) {
+                return Response.status(Response.Status.NOT_FOUND).build();
+            }
 
-        if (changed) {
-            existingTag.persist();
-            return Response.ok(existingTag).build();
-        } else {
-            return Response.status(Response.Status.NOT_MODIFIED).build();
+            if (tag.getName() != null) {
+                existingTag.setName(tag.getTagName());
+                changed = true;
+            }
+
+            if (changed) {
+                existingTag.persist();
+                return Response.ok(existingTag).build();
+            } else {
+                return Response.status(Response.Status.NOT_MODIFIED).build();
+            }
         }
-    }
-*/
+    */
     @DELETE
     @Path("/{id}")
     @Transactional
@@ -69,5 +71,21 @@ public class TagResource {
         }
         existingTag.delete();
         return Response.status(Response.Status.NO_CONTENT).build();
+    }
+
+
+    @DELETE
+    @Path("/all")
+    @Transactional
+    public jakarta.ws.rs.core.Response deleteAbteilung() {
+        List<Tag> tags = Tag.listAll();
+        if (tags.isEmpty()) {
+            return jakarta.ws.rs.core.Response.status(jakarta.ws.rs.core.Response.Status.NOT_FOUND).build();
+        } else {
+            for (Tag tag : tags) {
+                tag.delete();
+            }
+            return jakarta.ws.rs.core.Response.status(jakarta.ws.rs.core.Response.Status.OK).build();
+        }
     }
 }

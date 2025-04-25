@@ -15,6 +15,19 @@ public class ApiTest {
         // Setze die Basis-URL für die API
         RestAssured.baseURI = "http://localhost:8080";
         RestAssured.delete("/teachers");
+        System.out.println("teacher table deleted");
+    }
+
+    @Test
+    public void testCreateAbteilung(){
+        given()
+                .header("Content-Type", "application/json")
+                .body("{\"name\":\"TestAbt1\"}")
+                .when()
+                .post("/abteilungen")
+                .then()
+                .statusCode(201)
+                .body("name", equalTo("TestAbt1"));
     }
 
     @Test
@@ -44,6 +57,4 @@ public class ApiTest {
                 .statusCode(200);
     }
 
-
-    // Weitere Tests für andere Endpoints...
 }

@@ -1,5 +1,6 @@
 package api;
 
+import jpa.Lesson;
 import jpa.Room;
 import jakarta.transaction.Transactional;
 import javax.ws.rs.*;
@@ -91,5 +92,21 @@ public class RoomResource {
         }
         existingRoom.delete();
         return Response.status(Response.Status.NO_CONTENT).build();
+    }
+
+
+    @DELETE
+    @Path("/all")
+    @Transactional
+    public jakarta.ws.rs.core.Response deleteAbteilung() {
+        List<Room> rooms = Room.listAll();
+        if (rooms.isEmpty()){
+            return jakarta.ws.rs.core.Response.status(jakarta.ws.rs.core.Response.Status.NOT_FOUND).build();
+        }else {
+            for (Room room : rooms) {
+                room.delete();
+            }
+            return jakarta.ws.rs.core.Response.status(jakarta.ws.rs.core.Response.Status.OK).build();
+        }
     }
 }

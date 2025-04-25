@@ -2,6 +2,7 @@ package api;
 
 import jakarta.transaction.Transactional;
 import jpa.Lesson;
+import jpa.LessonEnd;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -88,5 +89,21 @@ public class LessonResource {
         }
         existingLesson.delete();
         return Response.status(Response.Status.NO_CONTENT).build();
+    }
+
+
+    @DELETE
+    @Path("/all")
+    @Transactional
+    public jakarta.ws.rs.core.Response deleteAbteilung() {
+        List<Lesson> lessons = Lesson.listAll();
+        if (lessons.isEmpty()){
+            return jakarta.ws.rs.core.Response.status(jakarta.ws.rs.core.Response.Status.NOT_FOUND).build();
+        }else {
+            for (Lesson lesson : lessons) {
+                lesson.delete();
+            }
+            return jakarta.ws.rs.core.Response.status(jakarta.ws.rs.core.Response.Status.OK).build();
+        }
     }
 }

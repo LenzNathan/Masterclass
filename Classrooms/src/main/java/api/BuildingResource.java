@@ -4,6 +4,7 @@ import jakarta.transaction.Transactional;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
+import jpa.Abteilung;
 import jpa.Building;
 
 import java.util.List;
@@ -68,5 +69,20 @@ public class BuildingResource {
         }
         existingBuilding.delete();
         return Response.status(Response.Status.NO_CONTENT).build();
+    }
+
+    @DELETE
+    @Path("/all")
+    @Transactional
+    public Response deleteAbteilung() {
+        List<Building> buildings = Building.listAll();
+        if (buildings.isEmpty()){
+            return Response.status(Response.Status.NOT_FOUND).build();
+        }else {
+            for (Building building : buildings) {
+                building.delete();
+            }
+            return Response.status(Response.Status.OK).build();
+        }
     }
 }

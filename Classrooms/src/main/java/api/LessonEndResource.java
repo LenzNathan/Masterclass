@@ -1,5 +1,6 @@
 package api;
 
+import jpa.LessonBegin;
 import jpa.LessonEnd;
 import jakarta.transaction.Transactional;
 import jakarta.ws.rs.*;
@@ -71,5 +72,20 @@ public class LessonEndResource {
         }
         existingLessonEnd.delete();
         return Response.status(Response.Status.NO_CONTENT).build();
+    }
+
+    @DELETE
+    @Path("/all")
+    @Transactional
+    public jakarta.ws.rs.core.Response deleteAbteilung() {
+        List<LessonEnd> lessonEnds = LessonEnd.listAll();
+        if (lessonEnds.isEmpty()){
+            return jakarta.ws.rs.core.Response.status(jakarta.ws.rs.core.Response.Status.NOT_FOUND).build();
+        }else {
+            for (LessonEnd lessonEnd : lessonEnds) {
+                lessonEnd.delete();
+            }
+            return jakarta.ws.rs.core.Response.status(jakarta.ws.rs.core.Response.Status.OK).build();
+        }
     }
 }
