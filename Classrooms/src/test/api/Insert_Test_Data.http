@@ -7,6 +7,10 @@ DELETE http://localhost:8080/lesson-starts/all
 ###4
 DELETE http://localhost:8080/lesson-ends/all
 ###5
+DELETE http://localhost:8080/tags/all
+###
+DELETE http://localhost:8080/teachers/all
+###
 POST http://localhost:8080/abteilungen
 Content-Type: application/json
 
@@ -172,3 +176,59 @@ Content-Type: application/json
 ###29
 GET http://localhost:8080/tags/
 ###30
+POST http://localhost:8080/teachers
+Content-Type: application/json
+
+{
+  "nickname": "MustM",
+  "firstname": "Max",
+  "lastname": "Mustermann",
+  "tags": [
+    {
+      "id": 1,
+      "name": "Stanzen"
+    },
+    {
+      "id": 2,
+      "name": "Bohren"
+    }
+  ]
+}
+###31
+POST http://localhost:8080/teachers
+Content-Type: application/json
+
+{
+  "nickname": "MeisR",
+  "firstname": "Raphael",
+  "lastname": "Meister"
+}
+###32
+POST http://localhost:8080/teachers
+Content-Type: application/json
+
+{
+  "nickname": "BaumJ",
+  "firstname": "Josef",
+  "lastname": "Baum"
+}
+###33
+POST http://localhost:8080/teachers
+Content-Type: application/json
+
+{
+  "nickname": "WinkG",
+  "firstname": "Günther",
+  "lastname": "Winkler"
+}
+###34
+POST http://localhost:8080/teachers
+Content-Type: application/json
+
+{
+  "nickname": "LangT",
+  "firstname": "Thomas",
+  "lastname": "Lang"
+}
+###35
+GET http://localhost:8080/teachers
