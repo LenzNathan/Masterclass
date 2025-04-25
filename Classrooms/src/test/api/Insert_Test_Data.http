@@ -6,7 +6,7 @@ DELETE http://localhost:8080/buildings/all
 DELETE http://localhost:8080/lesson-starts/all
 ###4
 DELETE http://localhost:8080/lesson-ends/all
-###5
+###
 DELETE http://localhost:8080/tags/all
 ###
 DELETE http://localhost:8080/teachers/all

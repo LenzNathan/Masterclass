@@ -7,8 +7,8 @@ import java.sql.Time;
 
 @Entity
 public class LessonEnd extends PanacheEntity {
-    private int lessonNumber;
-    private Time time;
+    private static int lessonNumber;
+    private static Time time;
 
     public static int getLessonNumber() {
         return lessonNumber;
