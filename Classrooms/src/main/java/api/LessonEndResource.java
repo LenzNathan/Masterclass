@@ -2,9 +2,9 @@ package api;
 
 import jpa.LessonEnd;
 import jakarta.transaction.Transactional;
-import javax.ws.rs.*;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
+import jakarta.ws.rs.*;
+import jakarta.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.Response;
 import java.util.List;
 
 @Path("/lesson-ends")
@@ -37,7 +37,7 @@ public class LessonEndResource {
     @PUT
     @Path("/{id}")
     @Transactional
-    public Response updateLessonEnd(@PathParam("id") Integer id, LessonEnd LessonEnd) {
+    public Response updateLessonEnd(@PathParam("id") Integer id, LessonEnd lessonEnd) {
         boolean changed = false;
         LessonEnd existingLessonEnd = LessonEnd.findById(id);
         if (existingLessonEnd == null) {

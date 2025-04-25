@@ -10,7 +10,7 @@ public class LessonEnd extends PanacheEntity {
     private int lessonNumber;
     private Time time;
 
-    public int getLessonNumber() {
+    public static int getLessonNumber() {
         return lessonNumber;
     }
 
@@ -18,7 +18,7 @@ public class LessonEnd extends PanacheEntity {
         this.lessonNumber = lessonNumber;
     }
 
-    public Time getTime() {
+    public static Time getTime() {
         return time;
     }
 
