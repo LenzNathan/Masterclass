@@ -1,0 +1,51 @@
+<changelist name="Uncommitted_changes_before_Update_at_07_03_2025_14_18_[Changes]" date="1741353499273" recycled="false" toDelete="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07_03_2025_14_18_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 07.03.2025 14:18 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/main/jpa/Lehrperson.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/main/jpa/Raum.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/main/jpa/Gruppe.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/8.12/checksums/md5-checksums.bin" />
+    <option name="AFTER_PATH" value=".gradle/8.12/checksums/md5-checksums.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07_03_2025_14_18_[Changes]/md5-checksums.bin" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/main/jpa/Speicher.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/main/jpa/Building.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/main/jpa/Schulklasse.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/main/jpa/Gebaeude.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/tmp/quarkusDev/quarkus-app-test-model.dat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/Classrooms-dev.jar" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/main/jpa/Schueler.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/main/jpa/Taetigkeit.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/main/api/GebaeudeResource.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/main/jpa/Steuerung.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/tmp/quarkusDev/quarkus-app-model.dat" />
+  </binary>
+</changelist>

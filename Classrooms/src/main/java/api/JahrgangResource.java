@@ -77,10 +77,10 @@ public class JahrgangResource {
     @DELETE
     @Path("/all")
     @Transactional
-    public jakarta.ws.rs.core.Response deleteAbteilung() {
+    public Response deleteJahrgaenge() {
         List<Jahrgang> jahrgaenge = Jahrgang.listAll();
         if (jahrgaenge.isEmpty()){
-            return jakarta.ws.rs.core.Response.status(jakarta.ws.rs.core.Response.Status.NOT_FOUND).build();
+            return Response.status(jakarta.ws.rs.core.Response.Status.NOT_FOUND).build();
         }else {
             for (Jahrgang jahrgang : jahrgaenge) {
                 jahrgang.delete();

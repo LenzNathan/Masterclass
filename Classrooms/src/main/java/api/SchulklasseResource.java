@@ -1,11 +1,10 @@
 package api;
 
-import jpa.Room;
 import jpa.Schulklasse;
 import jakarta.transaction.Transactional;
-import javax.ws.rs.*;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
+import jakarta.ws.rs.*;
+import jakarta.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.Response;
 import java.util.List;
 
 @Path("/schulklassen")
@@ -92,7 +91,7 @@ public class SchulklasseResource {
     @DELETE
     @Path("/all")
     @Transactional
-    public jakarta.ws.rs.core.Response deleteAbteilung() {
+    public jakarta.ws.rs.core.Response deleteSchulKlassen() {
         List<Schulklasse> schulklasses = Schulklasse.listAll();
         if (schulklasses.isEmpty()){
             return jakarta.ws.rs.core.Response.status(jakarta.ws.rs.core.Response.Status.NOT_FOUND).build();

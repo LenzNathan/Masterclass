@@ -1,0 +1,318 @@
+###1
+DELETE http://localhost:8080/abteilungen/all
+###2
+DELETE http://localhost:8080/buildings/all
+###3
+DELETE http://localhost:8080/lesson-starts/all
+###4
+DELETE http://localhost:8080/lesson-ends/all
+###5
+DELETE http://localhost:8080/teachers/all
+###6
+DELETE http://localhost:8080/tags/all
+###7
+DELETE http://localhost:8080/groups/all
+###8
+DELETE http://localhost:8080/jahrgaenge/all
+###9
+DELETE http://localhost:8080/lessons/all
+###10
+DELETE http://localhost:8080/rooms/all
+###11
+DELETE http://localhost:8080/schulklassen/all
+###12
+DELETE http://localhost:8080/students/all
+###13
+DELETE http://localhost:8080/subjects/all
+###14
+POST http://localhost:8080/abteilungen
+Content-Type: application/json
+
+{
+  "nickname":"WI",
+  "name":"Wirtschaftsingenieure"
+}
+###15
+POST http://localhost:8080/abteilungen
+Content-Type: application/json
+
+{
+  "nickname":"IT",
+  "name":"Informationstechnologie"
+}
+###16
+POST http://localhost:8080/abteilungen
+Content-Type: application/json
+
+{
+  "nickname":"ME",
+  "name":"Maschinenbau"
+}
+###17
+POST http://localhost:8080/abteilungen
+Content-Type: application/json
+
+{
+  "nickname":"BWL",
+  "name":"Betriebswirtschaftslehre"
+}
+###18
+GET http://localhost:8080/abteilungen
+###19
+POST http://localhost:8080/buildings
+Content-Type: application/json
+
+{
+  "name":"Anichstraße",
+  "kuerzel":"A"
+}
+###20
+POST http://localhost:8080/buildings
+Content-Type: application/json
+
+{
+  "name":"Innrain",
+  "kuerzel":"I"
+}
+###21
+POST http://localhost:8080/buildings
+Content-Type: application/json
+
+{
+  "name":"Stoeckl",
+  "kuerzel":"S"
+}
+###22
+POST http://localhost:8080/buildings
+Content-Type: application/json
+
+{
+  "name":"Hofueberbau",
+  "kuerzel":"H"
+}
+###23
+GET http://localhost:8080/buildings
+###24
+POST http://localhost:8080/lesson-starts
+Content-Type: application/json
+
+{
+  "lessonNumber": 1,
+  "time": "08:00:00"
+}
+###25
+POST http://localhost:8080/lesson-starts
+Content-Type: application/json
+
+{
+  "lessonNumber": 2,
+  "time": "08:50:00"
+}
+###26
+POST http://localhost:8080/lesson-starts
+Content-Type: application/json
+
+{
+  "lessonNumber": 3,
+  "time": "09:55:00"
+}
+###27
+POST http://localhost:8080/lesson-starts
+Content-Type: application/json
+
+{
+  "lessonNumber": 4,
+  "time": "10:45:00"
+}
+###28
+GET http://localhost:8080/lesson-starts
+###29
+POST http://localhost:8080/lesson-ends
+Content-Type: application/json
+
+{
+  "lessonNumber": 1,
+  "time": "08:50:00"
+}
+###30
+POST http://localhost:8080/lesson-ends
+Content-Type: application/json
+
+{
+  "lessonNumber": 2,
+  "time": "09:40:00"
+}
+###31
+POST http://localhost:8080/lesson-ends
+Content-Type: application/json
+
+{
+  "lessonNumber": 3,
+  "time": "10:45:00"
+}
+###32
+GET http://localhost:8080/lesson-ends/
+###33
+POST http://localhost:8080/tags
+Content-Type: application/json
+
+{
+  "name": "Stanzen"
+}
+###34
+POST http://localhost:8080/tags
+Content-Type: application/json
+
+{
+  "name": "Bohren"
+}
+###35
+POST http://localhost:8080/tags
+Content-Type: application/json
+
+{
+  "name": "Fraesen"
+}
+###36
+POST http://localhost:8080/tags
+Content-Type: application/json
+
+{
+  "name": "Drehen"
+}
+###37
+POST http://localhost:8080/tags
+Content-Type: application/json
+
+{
+  "name": "Feilen"
+}
+###38
+GET http://localhost:8080/tags/
+###39
+POST http://localhost:8080/teachers
+Content-Type: application/json
+
+{
+  "nickname": "MustM",
+  "firstname": "Max",
+  "lastname": "Mustermann",
+  "tags": [
+    {
+      "id": 1,
+      "name": "Stanzen"
+    },
+    {
+      "id": 2,
+      "name": "Bohren"
+    }
+  ]
+}
+###40
+POST http://localhost:8080/teachers
+Content-Type: application/json
+
+{
+  "nickname": "MeisR",
+  "firstname": "Raphael",
+  "lastname": "Meister"
+}
+###41
+POST http://localhost:8080/teachers
+Content-Type: application/json
+
+{
+  "nickname": "BaumJ",
+  "firstname": "Josef",
+  "lastname": "Baum"
+}
+###42
+POST http://localhost:8080/teachers
+Content-Type: application/json
+
+{
+  "nickname": "WinkG",
+  "firstname": "Günther",
+  "lastname": "Winkler"
+}
+###43
+POST http://localhost:8080/teachers
+Content-Type: application/json
+
+{
+  "nickname": "LangT",
+  "firstname": "Thomas",
+  "lastname": "Lang"
+}
+###44
+GET http://localhost:8080/teachers
+###45
+POST http://localhost:8080/groups
+Content-Type: application/json
+
+{
+  "kennung": "A"
+}
+###46
+GET http://localhost:8080/groups
+###47
+POST http://localhost:8080/jahrgaenge
+Content-Type: application/json
+
+{
+  "stufe": 1
+}
+###48
+GET http://localhost:8080/jahrgaenge
+###49
+POST http://localhost:8080/lessons
+Content-Type: application/json
+
+{
+  "date": "2020-07-30T18:00:00.000Z"
+}
+###50
+GET http://localhost:8080/lessons
+###51
+POST http://localhost:8080/rooms
+Content-Type: application/json
+
+{
+  "number": 8,
+  "floor": 1,
+  "capacity": 30
+}
+###52
+GET http://localhost:8080/rooms
+###53
+POST http://localhost:8080/schulklassen
+Content-Type: application/json
+
+{
+  "kennung": "B",
+  "nickname": "4BHWII"
+}
+###54
+GET http://localhost:8080/schulklassen
+###55
+POST http://localhost:8080/students
+Content-Type: application/json
+
+{
+  "firstname": "Max",
+  "lastname": "Mustermann"
+}
+###56
+GET http://localhost:8080/students
+###57
+POST http://localhost:8080/subjects
+Content-Type: application/json
+
+{
+  "name": "AM",
+  "hoursPerWeek": 2,
+  "maxHoursPerDay": 2,
+  "minHoursPerDay": 2
+}
+###58
+GET http://localhost:8080/subjects

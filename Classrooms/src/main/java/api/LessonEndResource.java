@@ -1,6 +1,5 @@
 package api;
 
-import jpa.LessonBegin;
 import jpa.LessonEnd;
 import jakarta.transaction.Transactional;
 import jakarta.ws.rs.*;
@@ -77,7 +76,7 @@ public class LessonEndResource {
     @DELETE
     @Path("/all")
     @Transactional
-    public jakarta.ws.rs.core.Response deleteAbteilung() {
+    public jakarta.ws.rs.core.Response deleteLessonEnds() {
         List<LessonEnd> lessonEnds = LessonEnd.listAll();
         if (lessonEnds.isEmpty()){
             return jakarta.ws.rs.core.Response.status(jakarta.ws.rs.core.Response.Status.NOT_FOUND).build();

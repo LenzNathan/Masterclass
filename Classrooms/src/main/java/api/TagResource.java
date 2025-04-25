@@ -77,13 +77,18 @@ public class TagResource {
     @DELETE
     @Path("/all")
     @Transactional
-    public jakarta.ws.rs.core.Response deleteAbteilung() {
+    public jakarta.ws.rs.core.Response deleteTags() {
         List<Tag> tags = Tag.listAll();
         if (tags.isEmpty()) {
-            return jakarta.ws.rs.core.Response.status(jakarta.ws.rs.core.Response.Status.NOT_FOUND).build();
+            return Response.status(jakarta.ws.rs.core.Response.Status.NOT_FOUND).build();
         } else {
-            for (Tag tag : tags) {
-                tag.delete();
+            try {
+                for (Tag tag : tags) {
+                    tag.delete();
+                }
+            } catch (Exception e) {
+                return Response.status(Response.Status.CONFLICT).entity("Es ist nicht möglich alle Tags zu löschen," +
+                        "da manche von anderen Tabellen referenziert werden").build();
             }
             return jakarta.ws.rs.core.Response.status(jakarta.ws.rs.core.Response.Status.OK).build();
         }

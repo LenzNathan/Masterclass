@@ -1,6 +1,5 @@
 package api;
 
-import jpa.Building;
 import jpa.Group;
 import jakarta.transaction.Transactional;
 import jakarta.ws.rs.*;
@@ -81,7 +80,7 @@ public class GroupResource {
     @DELETE
     @Path("/all")
     @Transactional
-    public Response deleteAbteilung() {
+    public Response deleteGroups() {
         List<Group> groups = Group.listAll();
         if (groups.isEmpty()){
             return Response.status(Response.Status.NOT_FOUND).build();

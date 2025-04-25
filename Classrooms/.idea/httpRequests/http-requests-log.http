@@ -1,0 +1,679 @@
+GET http://localhost:8080/subjects
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-04-25T224801-5.200.json
+
+###
+
+POST http://localhost:8080/subjects
+Content-Type: application/json
+Content-Length: 85
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "AM",
+  "hoursPerWeek": 2,
+  "maxHoursPerDay": 2,
+  "minHoursPerDay": 2
+}
+
+<> 2025-04-25T224801-5.201.json
+
+###
+
+GET http://localhost:8080/students
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-04-25T224801-4.200.json
+
+###
+
+POST http://localhost:8080/students
+Content-Type: application/json
+Content-Length: 52
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "firstname": "Max",
+  "lastname": "Mustermann"
+}
+
+<> 2025-04-25T224801-4.201.json
+
+###
+
+GET http://localhost:8080/schulklassen
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-04-25T224801-3.200.json
+
+###
+
+POST http://localhost:8080/schulklassen
+Content-Type: application/json
+Content-Length: 44
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "kennung": "B",
+  "nickname": "4BHWII"
+}
+
+<> 2025-04-25T224801-3.201.json
+
+###
+
+GET http://localhost:8080/rooms
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-04-25T224801-2.200.json
+
+###
+
+POST http://localhost:8080/rooms
+Content-Type: application/json
+Content-Length: 49
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "number": 8,
+  "floor": 1,
+  "capacity": 30
+}
+
+<> 2025-04-25T224801-2.201.json
+
+###
+
+GET http://localhost:8080/lessons
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-04-25T224801-1.200.json
+
+###
+
+POST http://localhost:8080/lessons
+Content-Type: application/json
+Content-Length: 40
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "date": "2020-07-30T18:00:00.000Z"
+}
+
+<> 2025-04-25T224801-1.201.json
+
+###
+
+GET http://localhost:8080/jahrgaenge
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-04-25T224801.200.json
+
+###
+
+POST http://localhost:8080/jahrgaenge
+Content-Type: application/json
+Content-Length: 16
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "stufe": 1
+}
+
+<> 2025-04-25T224801.201.json
+
+###
+
+GET http://localhost:8080/groups
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-04-25T224800-2.200.json
+
+###
+
+POST http://localhost:8080/groups
+Content-Type: application/json
+Content-Length: 20
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "kennung": "A"
+}
+
+<> 2025-04-25T224800-10.201.json
+
+###
+
+GET http://localhost:8080/teachers
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-04-25T224800-1.200.json
+
+###
+
+POST http://localhost:8080/teachers
+Content-Type: application/json
+Content-Length: 72
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "nickname": "LangT",
+  "firstname": "Thomas",
+  "lastname": "Lang"
+}
+
+<> 2025-04-25T224800-9.201.json
+
+###
+
+POST http://localhost:8080/teachers
+Content-Type: application/json
+Content-Length: 77
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "nickname": "WinkG",
+  "firstname": "Günther",
+  "lastname": "Winkler"
+}
+
+<> 2025-04-25T224800-8.201.json
+
+###
+
+POST http://localhost:8080/teachers
+Content-Type: application/json
+Content-Length: 71
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "nickname": "BaumJ",
+  "firstname": "Josef",
+  "lastname": "Baum"
+}
+
+<> 2025-04-25T224800-7.201.json
+
+###
+
+POST http://localhost:8080/teachers
+Content-Type: application/json
+Content-Length: 76
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "nickname": "MeisR",
+  "firstname": "Raphael",
+  "lastname": "Meister"
+}
+
+<> 2025-04-25T224800-6.201.json
+
+###
+
+POST http://localhost:8080/teachers
+Content-Type: application/json
+Content-Length: 194
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "nickname": "MustM",
+  "firstname": "Max",
+  "lastname": "Mustermann",
+  "tags": [
+    {
+      "id": 1,
+      "name": "Stanzen"
+    },
+    {
+      "id": 2,
+      "name": "Bohren"
+    }
+  ]
+}
+
+<> 2025-04-25T224800-5.201.json
+
+###
+
+GET http://localhost:8080/tags/
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-04-25T224800.200.json
+
+###
+
+POST http://localhost:8080/tags
+Content-Type: application/json
+Content-Length: 22
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "Feilen"
+}
+
+<> 2025-04-25T224800-4.201.json
+
+###
+
+POST http://localhost:8080/tags
+Content-Type: application/json
+Content-Length: 22
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "Drehen"
+}
+
+<> 2025-04-25T224800-3.201.json
+
+###
+
+POST http://localhost:8080/tags
+Content-Type: application/json
+Content-Length: 23
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "Fraesen"
+}
+
+<> 2025-04-25T224800-2.201.json
+
+###
+
+POST http://localhost:8080/tags
+Content-Type: application/json
+Content-Length: 22
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "Bohren"
+}
+
+<> 2025-04-25T224800-1.201.json
+
+###
+
+POST http://localhost:8080/tags
+Content-Type: application/json
+Content-Length: 23
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "Stanzen"
+}
+
+<> 2025-04-25T224800.201.json
+
+###
+
+GET http://localhost:8080/lesson-ends/
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-04-25T224759-2.200.json
+
+###
+
+POST http://localhost:8080/lesson-ends
+Content-Type: application/json
+Content-Length: 45
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "lessonNumber": 3,
+  "time": "10:45:00"
+}
+
+<> 2025-04-25T224759-8.201.json
+
+###
+
+POST http://localhost:8080/lesson-ends
+Content-Type: application/json
+Content-Length: 45
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "lessonNumber": 2,
+  "time": "09:40:00"
+}
+
+<> 2025-04-25T224759-7.201.json
+
+###
+
+POST http://localhost:8080/lesson-ends
+Content-Type: application/json
+Content-Length: 45
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "lessonNumber": 1,
+  "time": "08:50:00"
+}
+
+<> 2025-04-25T224759-6.201.json
+
+###
+
+GET http://localhost:8080/lesson-starts
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-04-25T224759-1.200.json
+
+###
+
+POST http://localhost:8080/lesson-starts
+Content-Type: application/json
+Content-Length: 45
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "lessonNumber": 4,
+  "time": "10:45:00"
+}
+
+<> 2025-04-25T224759-5.201.json
+
+###
+
+POST http://localhost:8080/lesson-starts
+Content-Type: application/json
+Content-Length: 45
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "lessonNumber": 3,
+  "time": "09:55:00"
+}
+
+<> 2025-04-25T224759-4.201.json
+
+###
+
+POST http://localhost:8080/lesson-starts
+Content-Type: application/json
+Content-Length: 45
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "lessonNumber": 2,
+  "time": "08:50:00"
+}
+
+<> 2025-04-25T224759-3.201.json
+
+###
+
+POST http://localhost:8080/lesson-starts
+Content-Type: application/json
+Content-Length: 45
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "lessonNumber": 1,
+  "time": "08:00:00"
+}
+
+<> 2025-04-25T224759-2.201.json
+
+###
+
+GET http://localhost:8080/buildings
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-04-25T224759.200.json
+
+###
+
+POST http://localhost:8080/buildings
+Content-Type: application/json
+Content-Length: 43
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name":"Hofueberbau",
+  "kuerzel":"H"
+}
+
+<> 2025-04-25T224759-1.201.json
+
+###
+
+POST http://localhost:8080/buildings
+Content-Type: application/json
+Content-Length: 39
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name":"Stoeckl",
+  "kuerzel":"S"
+}
+
+<> 2025-04-25T224759.201.json
+
+###
+
+POST http://localhost:8080/buildings
+Content-Type: application/json
+Content-Length: 39
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name":"Innrain",
+  "kuerzel":"I"
+}
+
+<> 2025-04-25T224758-5.201.json
+
+###
+
+POST http://localhost:8080/buildings
+Content-Type: application/json
+Content-Length: 44
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name":"Anichstraße",
+  "kuerzel":"A"
+}
+
+<> 2025-04-25T224758-4.201.json
+
+###
+
+GET http://localhost:8080/abteilungen
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-04-25T224758.200.json
+
+###
+
+POST http://localhost:8080/abteilungen
+Content-Type: application/json
+Content-Length: 59
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "nickname":"BWL",
+  "name":"Betriebswirtschaftslehre"
+}
+
+<> 2025-04-25T224758-3.201.json
+
+###
+
+POST http://localhost:8080/abteilungen
+Content-Type: application/json
+Content-Length: 46
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "nickname":"ME",
+  "name":"Maschinenbau"
+}
+
+<> 2025-04-25T224758-2.201.json
+
+###
+
+POST http://localhost:8080/abteilungen
+Content-Type: application/json
+Content-Length: 57
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "nickname":"IT",
+  "name":"Informationstechnologie"
+}
+
+<> 2025-04-25T224758-1.201.json
+
+###
+
+POST http://localhost:8080/abteilungen
+Content-Type: application/json
+Content-Length: 55
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "nickname":"WI",
+  "name":"Wirtschaftsingenieure"
+}
+
+<> 2025-04-25T224758.201.json
+
+###
+
+DELETE http://localhost:8080/subjects/all
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+###
+
+DELETE http://localhost:8080/students/all
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+###
+
+DELETE http://localhost:8080/schulklassen/all
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+###
+
+DELETE http://localhost:8080/rooms/all
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+###
+
+DELETE http://localhost:8080/lessons/all
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+###
+

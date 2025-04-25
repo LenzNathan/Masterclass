@@ -1,0 +1,11 @@
+[
+  {
+    "id": 1,
+    "hoursPerWeek": 2,
+    "maxHoursPerDay": 2,
+    "minHoursPerDay": 2,
+    "name": "AM",
+    "tagsRequired": [],
+    "tagsUseful": []
+  }
+]

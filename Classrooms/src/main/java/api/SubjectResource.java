@@ -1,6 +1,5 @@
 package api;
 
-import jpa.Student;
 import jpa.Subject;
 import jakarta.transaction.Transactional;
 import jakarta.ws.rs.*;
@@ -102,7 +101,7 @@ public class SubjectResource {
     @DELETE
     @Path("/all")
     @Transactional
-    public jakarta.ws.rs.core.Response deleteAbteilung() {
+    public jakarta.ws.rs.core.Response deleteSubjects() {
         List<Subject> subjects = Subject.listAll();
         if (subjects.isEmpty()){
             return jakarta.ws.rs.core.Response.status(jakarta.ws.rs.core.Response.Status.NOT_FOUND).build();

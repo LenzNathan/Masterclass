@@ -86,7 +86,7 @@ public class TeacherResource {
     @DELETE
     @Path("/all")
     @Transactional
-    public jakarta.ws.rs.core.Response deleteAbteilung() {
+    public jakarta.ws.rs.core.Response deleteTeachers() {
         List<Teacher> teachers = Teacher.listAll();
         if (teachers.isEmpty()) {
             return jakarta.ws.rs.core.Response.status(jakarta.ws.rs.core.Response.Status.NOT_FOUND).build();

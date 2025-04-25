@@ -1,0 +1,79 @@
+Index: src/main/java/api/AbteilungResource.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package api;\r\n\r\nimport jpa.Abteilung;\r\nimport jakarta.transaction.Transactional;\r\nimport jakarta.ws.rs.*;\r\nimport jakarta.ws.rs.core.MediaType;\r\nimport jakarta.ws.rs.core.Response;\r\n\r\nimport java.util.List;\r\n\r\n@Path(\"/Abteilung\")\r\n@Produces(MediaType.APPLICATION_JSON)\r\n@Consumes(MediaType.APPLICATION_JSON)\r\npublic class AbteilungResource {\r\n\r\n    @GET\r\n    public List<Abteilung> getAllAbteilungen() {\r\n        return Abteilung.listAll();\r\n    }\r\n\r\n    @POST\r\n    @Transactional\r\n    public Response createAbteilung(Abteilung abteilung) {\r\n        abteilung.persist();\r\n        return Response.status(Response.Status.CREATED).entity(abteilung).build();\r\n    }\r\n\r\n    @GET\r\n    @Path(\"/{id}\")\r\n    public Response getAbteilung(@PathParam(\"id\") Integer id) {\r\n        Abteilung a = Abteilung.findById(id);\r\n        if (a == null){\r\n            return Response.status(Response.Status.NOT_FOUND).build();\r\n        }else {\r\n            return Response.status(Response.Status.OK).entity(a).build();\r\n        }\r\n    }\r\n\r\n    @PUT\r\n    @Path(\"/{id}\")\r\n    @Transactional\r\n    public Response updateAbteilung(@PathParam(\"id\") Integer id, Abteilung abteilung) {\r\n        boolean changed = false;\r\n        Abteilung existingAbteilung = Abteilung.findById(id);\r\n        if (existingAbteilung == null) {\r\n            return Response.status(Response.Status.NOT_FOUND).build();\r\n        }\r\n        if (abteilung.getNickname() != null) {\r\n            existingAbteilung.setNickname(abteilung.getNickname());\r\n            changed = true;\r\n        }\r\n        if (abteilung.getName() != null) {\r\n            existingAbteilung.setName(abteilung.getName());\r\n            changed = true;\r\n        }\r\n        if(changed) {\r\n            existingAbteilung.persist();\r\n            return Response.ok(existingAbteilung).build();\r\n        }else {\r\n            return Response.status(Response.Status.NOT_MODIFIED).build();\r\n        }\r\n    }\r\n\r\n    @DELETE\r\n    @Path(\"/{id}\")\r\n    @Transactional\r\n    public Response deleteAbteilung(@PathParam(\"id\") Integer id) {\r\n        Abteilung a = Abteilung.findById(id);\r\n        if (a == null){\r\n            return Response.status(Response.Status.NOT_FOUND).build();\r\n        }else {\r\n            a.delete();\r\n            return Response.status(Response.Status.NO_CONTENT).build();\r\n        }\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/api/AbteilungResource.java b/src/main/java/api/AbteilungResource.java
+--- a/src/main/java/api/AbteilungResource.java	(revision 52ec4d19fcc0ef8923db52b028b88756d2983112)
++++ b/src/main/java/api/AbteilungResource.java	(date 1742563516228)
+@@ -8,7 +8,7 @@
+ 
+ import java.util.List;
+ 
+-@Path("/Abteilung")
++@Path("/abteilung")
+ @Produces(MediaType.APPLICATION_JSON)
+ @Consumes(MediaType.APPLICATION_JSON)
+ public class AbteilungResource {
+Index: src/main/java/api/BuildingResource.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package api;\r\n\r\nimport jakarta.transaction.Transactional;\r\nimport jakarta.ws.rs.*;\r\nimport jakarta.ws.rs.core.MediaType;\r\nimport jakarta.ws.rs.core.Response;\r\nimport jpa.Building;\r\n\r\nimport java.util.List;\r\n\r\n@Path(\"/Building\")\r\n@Produces(MediaType.APPLICATION_JSON)\r\n@Consumes(MediaType.APPLICATION_JSON)\r\npublic class BuildingResource {\r\n\r\n    @GET\r\n    public List<Building> getAllBuilding() {\r\n        return Building.listAll();\r\n    }\r\n\r\n    @POST\r\n    @Transactional\r\n    public Response createBuilding(Building building) {\r\n        building.persist();\r\n        return Response.created(null).entity(building).build();\r\n        //return Response.status(Response.Status.CREATED).entity(building).build();\r\n    }\r\n\r\n    @GET\r\n    @Path(\"/{id}\")\r\n    public Building getBuilding(@PathParam(\"id\") Integer id) {\r\n        return Building.findById(id);\r\n    }\r\n\r\n    @PUT\r\n    @Path(\"/{id}\")\r\n    @Transactional\r\n    public Response updateBuilding(@PathParam(\"id\") Integer id, Building building) {\r\n        boolean changed = false;\r\n        Building existingBuilding = Building.findById(id);\r\n        if (existingBuilding == null) {\r\n            return Response.status(Response.Status.NOT_FOUND).build();\r\n        }\r\n        if (building.getKuerzel() != null) {\r\n            existingBuilding.setKuerzel(building.getKuerzel());\r\n            changed = true;\r\n        }\r\n        if (building.getName() != null) {\r\n            existingBuilding.setName(building.getName());\r\n            changed = true;\r\n        }\r\n        if(changed) {\r\n            existingBuilding.persist();\r\n            return Response.ok(existingBuilding).build();\r\n        }else {\r\n            return Response.status(Response.Status.NOT_MODIFIED).build();\r\n        }\r\n    }\r\n\r\n\r\n    @DELETE\r\n    @Path(\"/{id}\")\r\n    @Transactional\r\n    public Response deleteBuilding(@PathParam(\"id\") Integer id) {\r\n        Building existingBuilding = Building.findById(id);\r\n        if (existingBuilding == null) {\r\n            return Response.status(Response.Status.NOT_FOUND).build();\r\n        }\r\n        existingBuilding.delete();\r\n        return Response.status(Response.Status.NO_CONTENT).build();\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/api/BuildingResource.java b/src/main/java/api/BuildingResource.java
+--- a/src/main/java/api/BuildingResource.java	(revision 52ec4d19fcc0ef8923db52b028b88756d2983112)
++++ b/src/main/java/api/BuildingResource.java	(date 1742563516228)
+@@ -8,7 +8,7 @@
+ 
+ import java.util.List;
+ 
+-@Path("/Building")
++@Path("/building")
+ @Produces(MediaType.APPLICATION_JSON)
+ @Consumes(MediaType.APPLICATION_JSON)
+ public class BuildingResource {
+Index: src/main/java/api/JahrgangResource.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package api;\r\n\r\nimport jpa.Jahrgang;\r\nimport javax.ws.rs.*;\r\nimport javax.ws.rs.core.MediaType;\r\nimport javax.ws.rs.core.Response;\r\nimport java.util.List;\r\n\r\n@Path(\"/abteilungsstufen\")\r\n@Produces(MediaType.APPLICATION_JSON)\r\n@Consumes(MediaType.APPLICATION_JSON)\r\npublic class JahrgangResource {\r\n\r\n    @GET\r\n    public List<Jahrgang> getAllJahrgangn() {\r\n        return Jahrgang.listAll();\r\n    }\r\n\r\n    @POST\r\n    public Response createJahrgang(Jahrgang abteilungsStufe) {\r\n        abteilungsStufe.persist();\r\n        return Response.status(Response.Status.CREATED).entity(abteilungsStufe).build();\r\n    }\r\n\r\n    @GET\r\n    @Path(\"/{id}\")\r\n    public Jahrgang getJahrgang(@PathParam(\"id\") Integer id) {\r\n        return Jahrgang.findById(id);\r\n    }\r\n\r\n    @PUT\r\n    @Path(\"/{id}\")\r\n    public Response updateJahrgang(@PathParam(\"id\") Integer id, Jahrgang abteilungsStufe) {\r\n        Jahrgang existingStufe = Jahrgang.findById(id);\r\n        if (existingStufe == null) {\r\n            return Response.status(Response.Status.NOT_FOUND).build();\r\n        }\r\n        existingStufe.setStufe(abteilungsStufe.getStufe());\r\n        existingStufe.setAbteilung(abteilungsStufe.getAbteilung());\r\n        existingStufe.persist();\r\n        return Response.ok(existingStufe).build();\r\n    }\r\n\r\n    @DELETE\r\n    @Path(\"/{id}\")\r\n    public Response deleteJahrgang(@PathParam(\"id\") Integer id) {\r\n        Jahrgang existingStufe = Jahrgang.findById(id);\r\n        if (existingStufe == null) {\r\n            return Response.status(Response.Status.NOT_FOUND).build();\r\n        }\r\n        existingStufe.delete();\r\n        return Response.status(Response.Status.NO_CONTENT).build();\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/api/JahrgangResource.java b/src/main/java/api/JahrgangResource.java
+--- a/src/main/java/api/JahrgangResource.java	(revision 52ec4d19fcc0ef8923db52b028b88756d2983112)
++++ b/src/main/java/api/JahrgangResource.java	(date 1742563516236)
+@@ -1,12 +1,13 @@
+ package api;
+ 
++import jakarta.transaction.Transactional;
+ import jpa.Jahrgang;
+ import javax.ws.rs.*;
+ import javax.ws.rs.core.MediaType;
+ import javax.ws.rs.core.Response;
+ import java.util.List;
+ 
+-@Path("/abteilungsstufen")
++@Path("/jahrgang")
+ @Produces(MediaType.APPLICATION_JSON)
+ @Consumes(MediaType.APPLICATION_JSON)
+ public class JahrgangResource {
+@@ -17,6 +18,7 @@
+     }
+ 
+     @POST
++    @Transactional
+     public Response createJahrgang(Jahrgang abteilungsStufe) {
+         abteilungsStufe.persist();
+         return Response.status(Response.Status.CREATED).entity(abteilungsStufe).build();
+@@ -30,6 +32,7 @@
+ 
+     @PUT
+     @Path("/{id}")
++    @Transactional
+     public Response updateJahrgang(@PathParam("id") Integer id, Jahrgang abteilungsStufe) {
+         Jahrgang existingStufe = Jahrgang.findById(id);
+         if (existingStufe == null) {
