@@ -1,0 +1,16 @@
+{
+  "id": 1,
+  "firstname": "Max",
+  "lastname": "Mustermann",
+  "nickname": "MustM",
+  "tags": [
+    {
+      "id": 1,
+      "name": "Stanzen"
+    },
+    {
+      "id": 2,
+      "name": "Bohren"
+    }
+  ]
+}

@@ -1,16 +1,16 @@
 package jpa;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
+import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 
-import java.util.Date;
 import java.util.List;
 
 @Entity
 public class Lesson extends PanacheEntity {
-    private Date date;
+    private int weekdayIndex; //1-5 mo-fr
     @ManyToOne
     private Subject subject;
     @ManyToOne
@@ -22,12 +22,12 @@ public class Lesson extends PanacheEntity {
     @ManyToOne
     private LessonEnd end;
 
-    public Date getDate() {
-        return date;
+    public int getWeekdayIndex() {
+        return weekdayIndex;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setWeekdayIndex(int weekdayIndex) {
+        this.weekdayIndex = weekdayIndex;
     }
 
     public Subject getSubject() {

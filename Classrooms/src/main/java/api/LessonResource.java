@@ -1,11 +1,11 @@
 package api;
 
 import jakarta.transaction.Transactional;
-import jpa.Lesson;
-
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
+import jpa.Lesson;
+
 import java.util.List;
 
 @Path("/lessons")
@@ -45,8 +45,8 @@ public class LessonResource {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
 
-        if (lesson.getDate() != null) {
-            existingLesson.setDate(lesson.getDate());
+        if (lesson.getWeekdayIndex() >= 1 && lesson.getWeekdayIndex() <= 5) {
+            existingLesson.setWeekdayIndex(lesson.getWeekdayIndex());
             changed = true;
         }
         if (lesson.getSubject() != null) {
@@ -96,9 +96,9 @@ public class LessonResource {
     @Transactional
     public jakarta.ws.rs.core.Response deleteLessons() {
         List<Lesson> lessons = Lesson.listAll();
-        if (lessons.isEmpty()){
+        if (lessons.isEmpty()) {
             return jakarta.ws.rs.core.Response.status(jakarta.ws.rs.core.Response.Status.NOT_FOUND).build();
-        }else {
+        } else {
             for (Lesson lesson : lessons) {
                 lesson.delete();
             }
