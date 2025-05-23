@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="98e94692-f06b-442b-b981-b18563fbcbe7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../Classrooms/.gradle/8.12/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../Classrooms/.gradle/8.12/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Classrooms/.gradle/8.12/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../Classrooms/.gradle/8.12/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Classrooms/.gradle/8.12/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../Classrooms/.gradle/8.12/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Classrooms/.gradle/8.12/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../Classrooms/.gradle/8.12/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Classrooms/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../Classrooms/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Classrooms/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/../../Classrooms/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Classrooms/build/Classrooms-dev.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Classrooms/build/build-metrics.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Classrooms/build/build-metrics.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Classrooms/build/reports/problems/problems-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../Classrooms/build/reports/problems/problems-report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Classrooms/build/tmp/quarkusDev/quarkus-app-model.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Classrooms/build/tmp/quarkusDev/quarkus-app-test-model.dat" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "LenzNathan"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/LenzNathan/Masterclass.git",
+    "accountId": "183be4b0-0cfc-466b-8334-60cb006b33bf"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="2tzU56XtnrZopWBbr0B2hXhFw78" />
+  <component name="ProjectViewState">
+    <option name="flattenPackages" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.25659.59" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.25659.59" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="98e94692-f06b-442b-b981-b18563fbcbe7" name="Changes" comment="" />
+      <created>1741354214175</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1741354214175</updated>
+      <workItem from="1741354214789" duration="27000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
