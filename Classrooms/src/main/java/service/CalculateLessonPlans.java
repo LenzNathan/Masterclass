@@ -40,11 +40,19 @@ public class CalculateLessonPlans {
 
         List<Lesson> lessons = new ArrayList<>();
 
-        for (Room r : rooms) {
-            for (int i = 1; i <= 5; i++) {
-                for (Subject s : subjects) {
-                    for (LessonBegin lb : lessonBegins) {
-                        for (LessonEnd le : lessonEnds) {
+        for (Room r : rooms) { //Räume
+            for (int i = 1; i <= 5; i++) {//Wochentage
+                for (Subject s : subjects) { //Fächer
+                    for (LessonBegin lb : lessonBegins) {//beginn
+                        for (LessonEnd le : lessonEnds) {//ende
+                            if (lb.getLessonNumber() > le.getLessonNumber()) {
+                                System.out.print(pc.prBGRed("."));
+                                continue; //skip invalid lessons
+                            }
+                            if (le.getLessonNumber() - lb.getLessonNumber() > s.getMaxHoursPerDay()) {
+                                System.out.print(pc.prBGRed("."));
+                                continue; //skip lessons that are too long for the subject
+                            }
                             for (Group g : groups) { //for one group / lesson
                                 for (Group g2 : groups) {
                                     if (g.getSchulklasse() == g2.getSchulklasse()) {
@@ -56,7 +64,7 @@ public class CalculateLessonPlans {
                                         lesson.setWeekdayIndex(i);
                                         lesson.setSubject(s);
                                         lessons.add(lesson);
-                                        System.out.print(".");
+                                        System.out.print(pc.prBGGreen("."));
                                         if (lessons.size() % 500 == 0) {
                                             System.out.println();
                                         }
@@ -70,7 +78,7 @@ public class CalculateLessonPlans {
                                 lesson.setWeekdayIndex(i);
                                 lesson.setSubject(s);
                                 lessons.add(lesson);
-                                System.out.print(".");
+                                System.out.print(pc.prBGGreen("."));
                                 if (lessons.size() % 500 == 0) {
                                     System.out.println();
                                 }
@@ -137,6 +145,20 @@ public class CalculateLessonPlans {
         System.out.println("\tmultipleClasses: " + multipleClasses);
         System.out.println("\twrongSubjectHours: " + wrongSubjectHours + "\n");
         System.out.println("Lessons left: " + lessons.size());
+        System.out.println();
+        System.out.println("Creating LessonPlans");
+
+        System.out.println("testing chooseLesson with Group 1, lesson 1, weekday 1, option 0");
+        Lesson l = chooseLesson(lessons, groups.get(0), 1, 1, 0);
+        System.out.println("Chosen lesson:" + l.getSubject().getName() + " " +
+                l.getBegin().getLessonNumber() + "-" + l.getEnd().getLessonNumber() +
+                " in room " + l.getRoom().getBuilding() + l.getRoom().getFloor() + l.getRoom().getNumber());
+    }
+
+    public static Lesson chooseLesson(List<Lesson> lessons, Group g, int lessonNumber, int weekdayIndex, int optionIndex) {
+        List<Lesson> adequateLessons = lessons;
+        adequateLessons.removeIf(l -> l.getWeekdayIndex() != weekdayIndex || l.getBegin().getLessonNumber() != lessonNumber || !l.getGroups().contains(g));
+        return adequateLessons.get(optionIndex);
     }
 
     public static int getDuration(Lesson l) {

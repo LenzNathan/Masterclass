@@ -1,16 +1,16 @@
 GET http://localhost:8080/subjects
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.1.1
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.2
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
-<> 2025-05-23T214457.200.json
+<> 2025-06-06T144359.200.json
 
 ###
 
 POST http://localhost:8080/subjects
 Content-Type: application/json
 Content-Length: 82
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.1.1
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.2
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
@@ -21,14 +21,14 @@ Accept: */*
 "minHoursPerDay": 2
 }
 
-<> 2025-05-23T214457.201.json
+<> 2025-06-06T144358-3.201.json
 
 ###
 
 POST http://localhost:8080/subjects
 Content-Type: application/json
 Content-Length: 85
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.1.1
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.2
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
@@ -39,23 +39,23 @@ Accept: */*
   "minHoursPerDay": 2
 }
 
-<> 2025-05-23T214456-9.201.json
+<> 2025-06-06T144358-2.201.json
 
 ###
 
 GET http://localhost:8080/students
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.1.1
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.2
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
-<> 2025-05-23T214456-5.200.json
+<> 2025-06-06T144358-2.200.json
 
 ###
 
 POST http://localhost:8080/students
 Content-Type: application/json
 Content-Length: 52
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.1.1
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.2
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
@@ -64,23 +64,48 @@ Accept: */*
   "lastname": "Mustermann"
 }
 
-<> 2025-05-23T214456-8.201.json
+<> 2025-06-06T144358-1.201.json
 
 ###
 
 GET http://localhost:8080/schulklassen
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.1.1
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.2
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
-<> 2025-05-23T214456-4.200.json
+<> 2025-06-06T144358-1.200.json
+
+###
+
+POST http://localhost:8080/schulklassen
+Content-Type: application/json
+Content-Length: 44
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "kennung": "B",
+  "nickname": "4BHWII"
+}
+
+<> 2025-06-06T144358.201.json
+
+###
+
+GET http://localhost:8080/rooms
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-06-06T144358.200.json
 
 ###
 
 POST http://localhost:8080/rooms
 Content-Type: application/json
 Content-Length: 49
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.1.1
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.2
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
@@ -90,14 +115,14 @@ Accept: */*
   "capacity": 30
 }
 
-<> 2025-05-23T214456-7.201.json
+<> 2025-06-06T144357-2.201.json
 
 ###
 
 POST http://localhost:8080/rooms
 Content-Type: application/json
 Content-Length: 50
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.1.1
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.2
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
@@ -107,23 +132,23 @@ Accept: */*
   "capacity": 20
 }
 
-<> 2025-05-23T214456-6.201.json
+<> 2025-06-06T144357-1.201.json
 
 ###
 
 GET http://localhost:8080/lessons
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.1.1
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.2
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
-<> 2025-05-23T214456-3.200.json
+<> 2025-06-06T144357-1.200.json
 
 ###
 
 POST http://localhost:8080/lessons
 Content-Type: application/json
 Content-Length: 40
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.1.1
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.2
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
@@ -131,23 +156,23 @@ Accept: */*
   "date": "2020-07-30T18:00:00.000Z"
 }
 
-<> 2025-05-23T214456-5.201.json
+<> 2025-06-06T144357.201.json
 
 ###
 
 GET http://localhost:8080/jahrgaenge
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.1.1
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.2
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
-<> 2025-05-23T214456-2.200.json
+<> 2025-06-06T144357.200.json
 
 ###
 
 POST http://localhost:8080/jahrgaenge
 Content-Type: application/json
 Content-Length: 16
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.1.1
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.2
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
@@ -155,23 +180,23 @@ Accept: */*
   "stufe": 1
 }
 
-<> 2025-05-23T214456-4.201.json
+<> 2025-06-06T144356-5.201.json
 
 ###
 
 GET http://localhost:8080/groups
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.1.1
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.2
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
-<> 2025-05-23T214456-1.200.json
+<> 2025-06-06T144356-1.200.json
 
 ###
 
 POST http://localhost:8080/groups
 Content-Type: application/json
 Content-Length: 20
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.1.1
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.2
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
@@ -179,14 +204,14 @@ Accept: */*
   "kennung": "C"
 }
 
-<> 2025-05-23T214456-3.201.json
+<> 2025-06-06T144356-4.201.json
 
 ###
 
 POST http://localhost:8080/groups
 Content-Type: application/json
 Content-Length: 20
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.1.1
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.2
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
@@ -194,14 +219,14 @@ Accept: */*
   "kennung": "B"
 }
 
-<> 2025-05-23T214456-2.201.json
+<> 2025-06-06T144356-3.201.json
 
 ###
 
 POST http://localhost:8080/groups
 Content-Type: application/json
 Content-Length: 20
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.1.1
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.2
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
@@ -209,23 +234,23 @@ Accept: */*
   "kennung": "A"
 }
 
-<> 2025-05-23T214456-1.201.json
+<> 2025-06-06T144356-2.201.json
 
 ###
 
 GET http://localhost:8080/teachers
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.1.1
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.2
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
-<> 2025-05-23T214456.200.json
+<> 2025-06-06T144356.200.json
 
 ###
 
 POST http://localhost:8080/teachers
 Content-Type: application/json
 Content-Length: 72
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.1.1
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.2
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
@@ -235,14 +260,14 @@ Accept: */*
   "lastname": "Lang"
 }
 
-<> 2025-05-23T214456.201.json
+<> 2025-06-06T144356-1.201.json
 
 ###
 
 POST http://localhost:8080/teachers
 Content-Type: application/json
 Content-Length: 77
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.1.1
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.2
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
@@ -252,14 +277,14 @@ Accept: */*
   "lastname": "Winkler"
 }
 
-<> 2025-05-23T214455-12.201.json
+<> 2025-06-06T144356.201.json
 
 ###
 
 POST http://localhost:8080/teachers
 Content-Type: application/json
 Content-Length: 71
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.1.1
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.2
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
@@ -269,14 +294,14 @@ Accept: */*
   "lastname": "Baum"
 }
 
-<> 2025-05-23T214455-11.201.json
+<> 2025-06-06T144355-9.201.json
 
 ###
 
 POST http://localhost:8080/teachers
 Content-Type: application/json
 Content-Length: 76
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.1.1
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.2
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
@@ -286,14 +311,14 @@ Accept: */*
   "lastname": "Meister"
 }
 
-<> 2025-05-23T214455-10.201.json
+<> 2025-06-06T144355-8.201.json
 
 ###
 
 POST http://localhost:8080/teachers
 Content-Type: application/json
 Content-Length: 194
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.1.1
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.2
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
@@ -313,23 +338,23 @@ Accept: */*
   ]
 }
 
-<> 2025-05-23T214455-9.201.json
+<> 2025-06-06T144355-7.201.json
 
 ###
 
 GET http://localhost:8080/tags/
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.1.1
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.2
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
-<> 2025-05-23T214455-2.200.json
+<> 2025-06-06T144355-1.200.json
 
 ###
 
 POST http://localhost:8080/tags
 Content-Type: application/json
 Content-Length: 22
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.1.1
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.2
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
@@ -337,14 +362,14 @@ Accept: */*
   "name": "Feilen"
 }
 
-<> 2025-05-23T214455-8.201.json
+<> 2025-06-06T144355-6.201.json
 
 ###
 
 POST http://localhost:8080/tags
 Content-Type: application/json
 Content-Length: 22
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.1.1
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.2
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
@@ -352,14 +377,14 @@ Accept: */*
   "name": "Drehen"
 }
 
-<> 2025-05-23T214455-7.201.json
+<> 2025-06-06T144355-5.201.json
 
 ###
 
 POST http://localhost:8080/tags
 Content-Type: application/json
 Content-Length: 23
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.1.1
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.2
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
@@ -367,14 +392,14 @@ Accept: */*
   "name": "Fraesen"
 }
 
-<> 2025-05-23T214455-6.201.json
+<> 2025-06-06T144355-4.201.json
 
 ###
 
 POST http://localhost:8080/tags
 Content-Type: application/json
 Content-Length: 22
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.1.1
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.2
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
@@ -382,14 +407,14 @@ Accept: */*
   "name": "Bohren"
 }
 
-<> 2025-05-23T214455-5.201.json
+<> 2025-06-06T144355-3.201.json
 
 ###
 
 POST http://localhost:8080/tags
 Content-Type: application/json
 Content-Length: 23
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.1.1
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.2
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
@@ -397,23 +422,23 @@ Accept: */*
   "name": "Stanzen"
 }
 
-<> 2025-05-23T214455-4.201.json
+<> 2025-06-06T144355-2.201.json
 
 ###
 
 GET http://localhost:8080/lesson-ends/
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.1.1
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.2
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
-<> 2025-05-23T214455-1.200.json
+<> 2025-06-06T144355.200.json
 
 ###
 
 POST http://localhost:8080/lesson-ends
 Content-Type: application/json
 Content-Length: 45
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.1.1
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.2
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
@@ -422,14 +447,14 @@ Accept: */*
   "time": "10:45:00"
 }
 
-<> 2025-05-23T214455-3.201.json
+<> 2025-06-06T144355-1.201.json
 
 ###
 
 POST http://localhost:8080/lesson-ends
 Content-Type: application/json
 Content-Length: 45
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.1.1
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.2
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
@@ -438,14 +463,14 @@ Accept: */*
   "time": "09:40:00"
 }
 
-<> 2025-05-23T214455-2.201.json
+<> 2025-06-06T144355.201.json
 
 ###
 
 POST http://localhost:8080/lesson-ends
 Content-Type: application/json
 Content-Length: 45
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.1.1
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.2
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
@@ -454,23 +479,23 @@ Accept: */*
   "time": "08:50:00"
 }
 
-<> 2025-05-23T214455-1.201.json
+<> 2025-06-06T144354-9.201.json
 
 ###
 
 GET http://localhost:8080/lesson-starts
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.1.1
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.2
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
-<> 2025-05-23T214455.200.json
+<> 2025-06-06T144354-2.200.json
 
 ###
 
 POST http://localhost:8080/lesson-starts
 Content-Type: application/json
 Content-Length: 45
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.1.1
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.2
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
@@ -479,14 +504,14 @@ Accept: */*
   "time": "10:45:00"
 }
 
-<> 2025-05-23T214455.201.json
+<> 2025-06-06T144354-8.201.json
 
 ###
 
 POST http://localhost:8080/lesson-starts
 Content-Type: application/json
 Content-Length: 45
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.1.1
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.2
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
@@ -495,14 +520,14 @@ Accept: */*
   "time": "09:55:00"
 }
 
-<> 2025-05-23T214454-9.201.json
+<> 2025-06-06T144354-7.201.json
 
 ###
 
 POST http://localhost:8080/lesson-starts
 Content-Type: application/json
 Content-Length: 45
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.1.1
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.2
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
@@ -511,14 +536,14 @@ Accept: */*
   "time": "08:50:00"
 }
 
-<> 2025-05-23T214454-8.201.json
+<> 2025-06-06T144354-6.201.json
 
 ###
 
 POST http://localhost:8080/lesson-starts
 Content-Type: application/json
 Content-Length: 45
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.1.1
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.2
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
@@ -527,23 +552,23 @@ Accept: */*
   "time": "08:00:00"
 }
 
-<> 2025-05-23T214454-7.201.json
+<> 2025-06-06T144354-5.201.json
 
 ###
 
 GET http://localhost:8080/buildings
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.1.1
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.2
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
-<> 2025-05-23T214454-1.200.json
+<> 2025-06-06T144354-1.200.json
 
 ###
 
 POST http://localhost:8080/buildings
 Content-Type: application/json
 Content-Length: 43
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.1.1
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.2
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
@@ -552,14 +577,14 @@ Accept: */*
   "kuerzel":"H"
 }
 
-<> 2025-05-23T214454-6.201.json
+<> 2025-06-06T144354-4.201.json
 
 ###
 
 POST http://localhost:8080/buildings
 Content-Type: application/json
 Content-Length: 39
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.1.1
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.2
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
@@ -568,14 +593,14 @@ Accept: */*
   "kuerzel":"S"
 }
 
-<> 2025-05-23T214454-5.201.json
+<> 2025-06-06T144354-3.201.json
 
 ###
 
 POST http://localhost:8080/buildings
 Content-Type: application/json
 Content-Length: 39
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.1.1
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.2
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
@@ -584,14 +609,14 @@ Accept: */*
   "kuerzel":"I"
 }
 
-<> 2025-05-23T214454-4.201.json
+<> 2025-06-06T144354-2.201.json
 
 ###
 
 POST http://localhost:8080/buildings
 Content-Type: application/json
 Content-Length: 44
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.1.1
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.2
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
@@ -600,23 +625,23 @@ Accept: */*
   "kuerzel":"A"
 }
 
-<> 2025-05-23T214454-3.201.json
+<> 2025-06-06T144354-1.201.json
 
 ###
 
 GET http://localhost:8080/abteilungen
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.1.1
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.2
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
-<> 2025-05-23T214454.200.json
+<> 2025-06-06T144354.200.json
 
 ###
 
 POST http://localhost:8080/abteilungen
 Content-Type: application/json
 Content-Length: 59
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.1.1
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.2
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
@@ -625,14 +650,14 @@ Accept: */*
   "name":"Betriebswirtschaftslehre"
 }
 
-<> 2025-05-23T214454-2.201.json
+<> 2025-06-06T144354.201.json
 
 ###
 
 POST http://localhost:8080/abteilungen
 Content-Type: application/json
 Content-Length: 46
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.1.1
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.2
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
@@ -641,14 +666,14 @@ Accept: */*
   "name":"Maschinenbau"
 }
 
-<> 2025-05-23T214454-1.201.json
+<> 2025-06-06T144353-2.201.json
 
 ###
 
 POST http://localhost:8080/abteilungen
 Content-Type: application/json
 Content-Length: 57
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.1.1
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.2
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
@@ -657,14 +682,14 @@ Accept: */*
   "name":"Informationstechnologie"
 }
 
-<> 2025-05-23T214454.201.json
+<> 2025-06-06T144353-1.201.json
 
 ###
 
 POST http://localhost:8080/abteilungen
 Content-Type: application/json
 Content-Length: 55
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.1.1
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.2
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
@@ -673,28 +698,12 @@ Accept: */*
   "name":"Wirtschaftsingenieure"
 }
 
-<> 2025-05-23T214453.201.json
+<> 2025-06-06T144353.201.json
 
 ###
 
 DELETE http://localhost:8080/subjects/all
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.1.1
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-###
-
-DELETE http://localhost:8080/students/all
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.1.1
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-###
-
-DELETE http://localhost:8080/schulklassen/all
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.1.1
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.1.2
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 content-length: 0
