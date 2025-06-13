@@ -1,0 +1,9 @@
+{
+  "id": 1,
+  "kennung": "A",
+  "schulklasse": {
+    "id": 1,
+    "kennung": "B",
+    "nickname": "4BHWII"
+  }
+}

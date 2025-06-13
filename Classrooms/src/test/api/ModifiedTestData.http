@@ -1,0 +1,83 @@
+###1
+DELETE http://localhost:8080/abteilungen/all
+###2
+DELETE http://localhost:8080/buildings/all
+###3
+DELETE http://localhost:8080/lesson-starts/all
+###4
+DELETE http://localhost:8080/lesson-ends/all
+###5
+DELETE http://localhost:8080/teachers/all
+###6
+DELETE http://localhost:8080/tags/all
+###7
+DELETE http://localhost:8080/groups/all
+###8
+DELETE http://localhost:8080/jahrgaenge/all
+###9
+DELETE http://localhost:8080/lessons/all
+###10
+DELETE http://localhost:8080/rooms/all
+###11
+DELETE http://localhost:8080/schulklassen/all
+###12
+DELETE http://localhost:8080/students/all
+###13
+DELETE http://localhost:8080/subjects/all
+###14
+
+###53
+POST http://localhost:8080/schulklassen
+Content-Type: application/json
+
+{
+  "kennung": "B",
+  "nickname": "4BHWII"
+}
+
+###45
+POST http://localhost:8080/groups
+Content-Type: application/json
+
+{
+  "kennung": "A",
+  "schulklasse": {
+    "id": 1,
+    "kennung": "B",
+    "nickname": "4BHWII"
+  }
+}
+
+###45
+POST http://localhost:8080/groups
+Content-Type: application/json
+
+{
+  "kennung": "B",
+  "schulklasse": {
+    "id": 1,
+    "kennung": "B",
+    "nickname": "4BHWII"
+  }
+}
+
+####46
+POST http://localhost:8080/subjects
+Content-Type: application/json
+
+{
+"name": "AM",
+"hoursPerWeek": 2,
+"maxHoursPerDay": 2,
+"minHoursPerDay": 2
+}
+###15
+POST http://localhost:8080/subjects
+Content-Type: application/json
+
+{
+  "name": "Deutsch",
+  "hoursPerWeek": 2,
+  "maxHoursPerDay": 2,
+  "minHoursPerDay": 2
+}

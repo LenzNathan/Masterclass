@@ -149,10 +149,24 @@ public class CalculateLessonPlans {
         System.out.println("Creating LessonPlans");
 
         System.out.println("testing chooseLesson with Group 1, lesson 1, weekday 1, option 0");
+        for (Group g : groups) {
+            for (int i = 0; i < 2; i++) {
+                for (int j = 0; j < 5; j++) {
+                    boolean more_options = true;
+                    while (more_options) {
+                        try {
+                            Lesson lesson = chooseLesson(lessons, g, i + 1, j, 0);
+                            System.out.println("Found lesson: " + lesson.getSubject().getName() + " in Room" + lesson.getRoom().getNumber() + " for group " + g.getKennung());
+                        } catch (IndexOutOfBoundsException e) {
+                            System.out.println("No more options for group " + g.getKennung() + ", lesson " + (i + 1) + ", weekday " + (j + 1));
+                            more_options = false;
+                        }
+                    }
+                }
+            }
+        }
         Lesson l = chooseLesson(lessons, groups.get(0), 1, 1, 0);
-        System.out.println("Chosen lesson:" + l.getSubject().getName() + " " +
-                l.getBegin().getLessonNumber() + "-" + l.getEnd().getLessonNumber() +
-                " in room " + l.getRoom().getBuilding() + l.getRoom().getFloor() + l.getRoom().getNumber());
+
     }
 
     public static Lesson chooseLesson(List<Lesson> lessons, Group g, int lessonNumber, int weekdayIndex, int optionIndex) {
